@@ -1,0 +1,16 @@
+{
+    "sitename": "DorohovDesign",
+    "phone": "+7 (8002) 01-31-06",
+    "phone_link": "tel:88002013106",
+    "email": "hello@dorohovdesign.com",
+    "social": {
+        "behance": "#",
+        "vk": "#",
+        "facebook": "#",
+        "twitter": "#",
+        "instagram": "#"
+    },
+    "pages": {
+        "index": "index.html"
+    }
+}
