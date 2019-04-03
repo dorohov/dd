@@ -1,0 +1,54 @@
+.banner {
+    height: 100vh;
+    width: 100%;
+    background: #040F29;
+    display: flex;
+    align-items: flex-end;
+    &__inner {
+        @extend .container-xl;
+        display: flex;
+        height: 100%;
+        align-items: flex-end;
+        padding-top: 140px;
+    }
+    &__david {
+        height: 100%;
+        svg {
+            height: calc(100vh - 140px);
+            width: auto;
+        }
+    }
+    &__content {
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: -100px;
+        padding-top: 70px;
+        &__title,
+        &__desc,
+        &__btn {
+            width: 100%;
+        }
+        &__title {
+            color: #fff;
+            font-family: 'Intro';
+            font-weight: 900;
+            font-size: 110px;
+            line-height: 107px;
+            margin-bottom: 50px;
+        }
+        &__desc {
+            font-family: 'Intro Book';
+            font-weight: normal;
+            color: #fff;
+            font-size: 16px;
+            line-height: 18px;
+            max-width: 370px;
+            margin-bottom: 80px;
+        }
+        &__btn {
+        }
+    }
+}

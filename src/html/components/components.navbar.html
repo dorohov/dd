@@ -1,0 +1,25 @@
+<header class="navbar">
+    <div class="navbar__inner">
+        <div class="navbar__logo">
+            <a href="#">
+                @@include('components.svg.html', {"name": "logo"})
+            </a>
+        </div>
+        <div class="navbar__menu">
+            <ul>
+                <li class="is--active"><a href="#"><span>Портфолио</span></a></li>
+                <li><a href="#"><span>Услуги и цены</span></a></li>
+                <li><a href="#"><span>О нас</span></a></li>
+                <li><a href="#"><span>Блог</span></a></li>
+                <li><a href="#"><span>Вакансии</span></a></li>
+                <li><a href="#"><span>Контакты</span></a></li>
+            </ul>
+        </div>
+        <div class="navbar__phone">
+            <a href="@@phone_link">
+                @@include('components.svg.html', {"name": "call"})
+                <span>@@phone</span>
+            </a>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,20 @@
+@mixin borderedHover() {
+    position: relative;
+    display: block;
+    &::after {
+        content: '';
+        width: 0;
+        height: 20%;
+        background: $blue;
+        transition: .4s all ease;
+        left: 6px;
+        top: 54%;
+        z-index: -1;
+        position: absolute;
+    }
+    &:hover {
+        &::after {
+            width: calc(100% - 14px);
+        }
+    }
+}

@@ -1,4 +1,4 @@
-// @import "../../img/svg/sprite.scss";
+@import "../../img/svg/sprite.scss";
 @import "normalize";
 @import "ie";
 @import "vars";
@@ -10,3 +10,7 @@
 @import "navbar";
 @import "form";
 @import "footer";
+@import "geometry";
+@import "button";
+
+@import "pages/index/banner";

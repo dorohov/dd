@@ -1,0 +1,36 @@
+body {
+    font-family: 'Intro Book';
+    font-weight: normal;
+    line-height: normal;
+    position: relative;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+// #svgDavid path {
+//     transition: 1s all ease;
+// }
+
+svg {
+    overflow: visible;
+    width: 100%;
+}
+
+svg,
+img {
+    vertical-align: middle;
+}

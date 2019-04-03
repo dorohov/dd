@@ -1,0 +1,71 @@
+.navbar {
+    position: fixed;
+    height: 140px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100000;
+    display: flex;
+    font-family: 'Intro';
+    &__inner {
+        @extend .container-xl;
+        display: flex;
+        align-items: center;
+    }
+    &__logo {
+        a {
+            display: block;
+            position: relative;
+            svg {
+                fill: #fff;
+            }
+        }
+    }
+    &__menu {
+        margin: 0 auto;
+        ul {
+            display: flex;
+            li {
+                padding: 0 30px;
+                a {
+                    font-size: 14px;
+                    line-height: 16px;
+                    letter-spacing: 0.14em;
+                    text-transform: uppercase;
+                    color: #fff;
+                    display: block;
+                    span {
+                        padding: 10px;
+                        @include borderedHover();
+                    }
+                }
+                &.is--active {
+                    a {
+                        span {
+                            &::after {
+                                width: calc(100% - 14px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__phone {
+        margin-left: auto;
+        a {
+            display: flex;
+            align-items: center;
+            svg {
+                fill: $blue;
+            }
+            span {
+                margin-left: 10px;
+                color: #fff;
+                padding: 10px;
+                @include borderedHover();
+
+            }
+        }
+    }
+}
