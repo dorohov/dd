@@ -19,7 +19,7 @@
                     </svg>
                 </a>
             </div>
-            <div class="navbar__menu">
+            <nav class="navbar__menu">
                 <ul>
                     <li class="is--active"><a href="#"><span>Портфолио</span></a></li>
                     <li><a href="#"><span>Услуги и цены</span></a></li>
@@ -28,22 +28,76 @@
                     <li><a href="#"><span>Вакансии</span></a></li>
                     <li><a href="#"><span>Контакты</span></a></li>
                 </ul>
-            </div>
+            </nav>
             <div class="navbar__phone">
                 <a href="tel:88002013106">
                     <svg class="svg-call-dims svg is--call">
                         <use xlink:href="img/svg/sprites.svg#call"></use>
                     </svg>
-                    <span>+7 (8002) 01-31-06</span>
+                    <span>+7 (800) 201-31-06</span>
                 </a>
+            </div>
+            <div class="navbar__mobilebtn">
+                <button id="mobileMenu">
+                    <span class="dot is1 is--blue"></span>
+                    <span class="dot is2 is--purple"></span>
+                    <span class="dot is3 is--pink"></span>
+                    <span class="dot is4 is--pink"></span>
+                    <span class="dot is5 is--dblue"></span>
+                    <span class="dot is6 is--green"></span>
+                    <span class="dot is7 is--purple"></span>
+                    <span class="dot is8 is--green"></span>
+                    <span class="dot is9 is--blue"></span>
+                </button>
             </div>
         </div>
     </header>
+    <div class="mobile__container">
+        <nav class="mobile__container__menu">
+            <ul>
+                <li class="is--active"><a href="#" class="__mobLink"><span>Портфолио</span></a></li>
+                <li><a href="#" class="__mobLink"><span>Услуги и цены</span></a></li>
+                <li><a href="#" class="__mobLink"><span>О нас</span></a></li>
+                <li><a href="#" class="__mobLink"><span>Блог</span></a></li>
+                <li><a href="#" class="__mobLink"><span>Вакансии</span></a></li>
+                <li><a href="#" class="__mobLink"><span>Контакты</span></a></li>
+            </ul>
+        </nav>
+        <div class="mobile__container__phone">
+            <a href="tel:88002013106" class="__mobLink">
+                <svg class="svg-call-dims svg is--call">
+                    <use xlink:href="img/svg/sprites.svg#call"></use>
+                </svg>
+                <span>+7 (800) 201-31-06</span>
+            </a>
+        </div>
+        <div class="mobile__container__socials">
+            <span class="__mobLink">
+                <ul class="social is--white is--center">
+                    <li><a href="#"><svg class="svg-behance-dims svg is--behance">
+                                <use xlink:href="img/svg/sprites.svg#behance"></use>
+                            </svg></a></li>
+                    <li><a href="#"><svg class="svg-vk-dims svg is--vk">
+                                <use xlink:href="img/svg/sprites.svg#vk"></use>
+                            </svg></a></li>
+                    <li><a href="#"><svg class="svg-facebook-dims svg is--facebook">
+                                <use xlink:href="img/svg/sprites.svg#facebook"></use>
+                            </svg></a></li>
+                    <li><a href="#"><svg class="svg-twitter-dims svg is--twitter">
+                                <use xlink:href="img/svg/sprites.svg#twitter"></use>
+                            </svg></a></li>
+                    <li><a href="#"><svg class="svg-instagram-dims svg is--instagram">
+                                <use xlink:href="img/svg/sprites.svg#instagram"></use>
+                            </svg></a></li>
+                </ul>
+            </span>
+        </div>
+    </div>
     <main>
         <div class="banner">
             <div class="banner__inner">
                 <div class="banner__david">
-                    <svg width="821" height="851" viewBox="0 0 821 851" fill="none" xmlns="http://www.w3.org/2000/svg" id="svgDavid">
+                    <svg width="821" height="851" viewBox="0 0 821 851" fill="none" xmlns="http://www.w3.org/2000/svg" id="svgDavid" class="animationSvg">
                         <path d="M117.642 83.5614C119.072 82.4174 120.501 80.8445 121.931 79.4146C123.218 77.9847 124.504 76.4118 125.648 74.6958C126.792 73.1229 127.65 71.407 128.221 69.8341C128.364 69.4051 128.507 68.9762 128.507 68.6902C128.65 68.2612 128.65 67.8322 128.65 67.5462C128.65 67.4032 128.65 67.2602 128.65 66.9743V65.9733C128.65 65.2584 128.65 64.6864 128.793 64.1144C129.365 59.2527 131.367 54.9629 133.797 51.1021C134.941 49.2432 136.37 47.3843 137.943 45.6684C139.515 43.9525 141.231 42.3796 143.375 41.3787C143.947 41.0927 144.519 41.3787 144.805 41.9506C145.091 42.3796 144.805 42.9516 144.376 43.2376C142.804 44.2385 141.374 45.8114 140.23 47.5273C139.087 49.2432 137.943 50.9591 137.085 52.818C135.369 56.5358 134.083 60.5396 134.226 64.2574C134.226 64.6864 134.226 65.1154 134.369 65.5443L134.512 66.2593L134.655 67.2603C134.655 67.9752 134.798 68.6902 134.655 69.2621C134.655 69.9771 134.512 70.5491 134.369 71.264C133.797 73.8379 132.939 76.1258 131.795 78.1277C130.652 80.2725 129.508 82.2744 128.221 84.1333C126.935 85.9922 125.505 87.8511 123.933 89.567C122.36 91.2829 119.644 91.4259 117.928 89.853C116.213 88.2801 116.07 85.5632 117.642 83.8473C117.356 83.8473 117.499 83.7043 117.642 83.5614Z" fill="#64F6F3" />
                         <path d="M6.98989 244.714C5.27435 241.282 4.27361 237.993 3.41584 234.418C2.55807 230.843 1.98621 227.269 1.84325 223.694C1.55733 216.401 2.70104 208.823 5.70324 201.959C8.70545 195.095 13.1373 188.947 18.4269 183.799C23.7165 178.651 29.8638 174.361 36.2971 170.787C38.7275 169.5 41.7297 170.358 43.1593 172.788C44.5889 175.219 43.5882 178.222 41.1578 179.652C41.0149 179.652 40.8719 179.795 40.8719 179.795C34.8675 182.512 29.149 185.944 24.1453 190.091C19.1417 194.237 14.8528 199.242 11.8506 204.962C8.84839 210.681 7.27582 217.116 6.98989 223.694C6.84693 226.983 7.13285 230.271 7.56173 233.703C8.13358 236.992 8.99138 240.281 10.1351 243.284V243.427C10.421 244.285 9.9921 245.286 9.13432 245.714C8.41951 245.857 7.41878 245.572 6.98989 244.714Z" fill="#F376A2" />
                         <path d="M416.862 299.05C416.29 299.05 415.862 298.764 415.576 298.192C415.433 298.049 407.999 282.32 386.983 278.745C365.682 275.028 345.81 289.041 345.524 289.184C344.952 289.613 343.952 289.47 343.523 288.898C343.094 288.326 343.237 287.325 343.809 286.896C344.667 286.324 364.967 272.025 387.412 275.886C410 279.746 417.863 296.191 418.149 296.906C418.435 297.62 418.149 298.478 417.434 298.764C417.148 298.907 417.005 299.05 416.862 299.05Z" fill="#F376A2" />
@@ -113,9 +167,221 @@
                         <a href="#" class="btn">Подробнее</a>
                     </div>
                 </div>
+                <div class="banner__righttext">
+                    <span></span>
+                </div>
+                <div class="banner__bottom">
+                    <div class="banner__down">
+                        <button>
+                            <span>scroll down</span>
+                            <svg class="svg-down-dims svg is--down">
+                                <use xlink:href="img/svg/sprites.svg#down"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="banner__social">
+                        <ul class="social is--white is--right">
+                            <li><a href="#"><svg class="svg-behance-dims svg is--behance">
+                                        <use xlink:href="img/svg/sprites.svg#behance"></use>
+                                    </svg></a></li>
+                            <li><a href="#"><svg class="svg-vk-dims svg is--vk">
+                                        <use xlink:href="img/svg/sprites.svg#vk"></use>
+                                    </svg></a></li>
+                            <li><a href="#"><svg class="svg-facebook-dims svg is--facebook">
+                                        <use xlink:href="img/svg/sprites.svg#facebook"></use>
+                                    </svg></a></li>
+                            <li><a href="#"><svg class="svg-twitter-dims svg is--twitter">
+                                        <use xlink:href="img/svg/sprites.svg#twitter"></use>
+                                    </svg></a></li>
+                            <li><a href="#"><svg class="svg-instagram-dims svg is--instagram">
+                                        <use xlink:href="img/svg/sprites.svg#instagram"></use>
+                                    </svg></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="services slide">
+            <div class="services__inner">
+                <div class="heading is--black">Что мы <br> предлагаем</div>
+                <div class="services__wrap">
+                    <div class="services__block is--blue">
+                        <a href="#" class="services__block__link">
+                            <div class="services__block__bg"></div>
+                            <div class="services__block__inner">
+                                <div class="services__block__title">Разработка <br> сайтов</div>
+                                <div class="services__block__desc">Создаем web — проекты любой сложности: от эффектной промо — страницы до сложного портала</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="services__block is--purple">
+                        <a href="#" class="services__block__link">
+                            <div class="services__block__bg"></div>
+                            <div class="services__block__inner">
+                                <div class="services__block__title">Контекстная <br> реклама</div>
+                                <div class="services__block__desc">Настроим прибыльную рекламную кампанию в Яндекс.Директ/Google Реклама</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="services__block is--blue">
+                        <a href="#" class="services__block__link">
+                            <div class="services__block__bg"></div>
+                            <div class="services__block__inner">
+                                <div class="services__block__title">Маркетинговое <br> исследование</div>
+                                <div class="services__block__desc">Предоставим вам детальный анализ рыночной ситуации с вариантами дальнейшей стратегии развития</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="services__block is--pink">
+                        <a href="#" class="services__block__link">
+                            <div class="services__block__bg"></div>
+                            <div class="services__block__inner">
+                                <div class="services__block__title">Таргетинг + SMM <br> продвижение</div>
+                                <div class="services__block__desc">Эффективная реклама и постоянный контакт с аудиторией (клиентами) в социальных сетях</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="services__block is--dblue">
+                        <a href="#" class="services__block__link">
+                            <div class="services__block__bg"></div>
+                            <div class="services__block__inner">
+                                <div class="services__block__title">SEO- <br> продвижение</div>
+                                <div class="services__block__desc">Выведем Ваш сайт в ТОП-5 поисковых систем Яндекс и Google</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="services__block is--green">
+                        <a href="#" class="services__block__link">
+                            <div class="services__block__bg"></div>
+                            <div class="services__block__inner">
+                                <div class="services__block__title">Техническая <br> поддержка</div>
+                                <div class="services__block__desc">Окажем полную техническую и дизайнерскую поддержку вашему сайту</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="services__block is--pink">
+                        <a href="#" class="services__block__link">
+                            <div class="services__block__bg"></div>
+                            <div class="services__block__inner">
+                                <div class="services__block__title">Фирменный <br> стиль</div>
+                                <div class="services__block__desc">Ваш продукт не останется без внимания покупателей</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="services__block is--blue">
+                        <a href="#" class="services__block__link">
+                            <div class="services__block__bg"></div>
+                            <div class="services__block__inner">
+                                <div class="services__block__title">Полиграфия</div>
+                                <div class="services__block__desc">Листовки, буклеты, каталоги, упаковка, визитки, календари и другая рекламная продукция</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
     <footer class="footer">
         footer
     </footer>
@@ -129,6 +395,9 @@
     <script src="dist/js/jquery.visible.min.js"></script>
     <!-- <script src="dist/js/svg.min.js"></script> -->
     <script src="dist/js/spyeye.js"></script>
+    <script src="dist/js/prefixfree.dynamic-dom.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script> -->
+    <script src="dist/js/anime.min.js"></script>
     <script src="dist/js/main.js"></script>
 </body>
 

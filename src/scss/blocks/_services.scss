@@ -1,0 +1,81 @@
+.services {
+    &__inner {
+        @extend .container-xl;
+        overflow: hidden;
+    }
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -8px;
+    }
+    &__block {
+        max-width: 25%;
+        width: 100%;
+        padding: 8px;
+        &__inner {
+            transition: .5s all ease;
+        }
+        &__link {
+            display: block;
+            position: relative;
+            padding-top: 45px;
+            &:hover {
+                .services {
+                    &__block {
+                        &__bg {
+                            width: 100%;
+                            height: 100%;
+                        }
+                        &__inner {
+                            padding-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        &__bg {
+            width: 38px;
+            height: 13px;
+            border-radius: 2px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: .5s all ease;
+        }
+        &.is--blue {
+            .services__block {
+                &__bg {
+                    background: $blue;
+                }
+            }
+        }
+        &.is--green {
+            .services__block {
+                &__bg {
+                    background: $green;
+                }
+            }
+        }
+        &.is--dblue {
+            .services__block {
+                &__bg {
+                    background: $dblue;
+                }
+            }
+        }
+        &.is--pink {
+            .services__block {
+                &__bg {
+                    background: $pink;
+                }
+            }
+        }
+        &.is--purple {
+            .services__block {
+                &__bg {
+                    background: $purple;
+                }
+            }
+        }
+    }
+}

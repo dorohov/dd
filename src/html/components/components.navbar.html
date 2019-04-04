@@ -5,7 +5,7 @@
                 @@include('components.svg.html', {"name": "logo"})
             </a>
         </div>
-        <div class="navbar__menu">
+        <nav class="navbar__menu">
             <ul>
                 <li class="is--active"><a href="#"><span>Портфолио</span></a></li>
                 <li><a href="#"><span>Услуги и цены</span></a></li>
@@ -14,12 +14,46 @@
                 <li><a href="#"><span>Вакансии</span></a></li>
                 <li><a href="#"><span>Контакты</span></a></li>
             </ul>
-        </div>
+        </nav>
         <div class="navbar__phone">
             <a href="@@phone_link">
                 @@include('components.svg.html', {"name": "call"})
                 <span>@@phone</span>
             </a>
         </div>
+        <div class="navbar__mobilebtn">
+            <button id="mobileMenu">
+                <span class="dot is1 is--blue"></span>
+                <span class="dot is2 is--purple"></span>
+                <span class="dot is3 is--pink"></span>
+                <span class="dot is4 is--pink"></span>
+                <span class="dot is5 is--dblue"></span>
+                <span class="dot is6 is--green"></span>
+                <span class="dot is7 is--purple"></span>
+                <span class="dot is8 is--green"></span>
+                <span class="dot is9 is--blue"></span>
+            </button>
+        </div>
     </div>
 </header>
+<div class="mobile__container">
+    <nav class="mobile__container__menu">
+        <ul>
+            <li class="is--active"><a href="#" class="__mobLink"><span>Портфолио</span></a></li>
+            <li><a href="#" class="__mobLink"><span>Услуги и цены</span></a></li>
+            <li><a href="#" class="__mobLink"><span>О нас</span></a></li>
+            <li><a href="#" class="__mobLink"><span>Блог</span></a></li>
+            <li><a href="#" class="__mobLink"><span>Вакансии</span></a></li>
+            <li><a href="#" class="__mobLink"><span>Контакты</span></a></li>
+        </ul>
+    </nav>
+    <div class="mobile__container__phone">
+        <a href="@@phone_link" class="__mobLink">
+            @@include('components.svg.html', {"name": "call"})
+            <span>@@phone</span>
+        </a>
+    </div>
+    <div class="mobile__container__socials">
+        <span class="__mobLink">@@include('../components/components.socials.html', {"color": "white", "align": "center"})</span>
+    </div>
+</div>

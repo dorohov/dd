@@ -3,6 +3,17 @@ body {
     font-weight: normal;
     line-height: normal;
     position: relative;
+    &.mobile-open {
+        .mobile__container {
+            transform: none;
+            border-radius: 0;
+            &__green,
+            &__purple,
+            &__main {
+                transform: none;
+            }
+        }
+    }
 }
 
 *,

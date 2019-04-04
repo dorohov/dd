@@ -1,24 +1,33 @@
 .banner {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background: #040F29;
+    // animation: 15s ease-in-out 0s normal none infinite bg;
+    // background: linear-gradient(69.95deg, #1C1E2B 0%, #000342 68.44%, #510339 111.1%);
     display: flex;
     align-items: flex-end;
     &__inner {
         @extend .container-xl;
         display: flex;
         height: 100%;
-        align-items: flex-end;
+        align-items: flex-start;
         padding-top: 140px;
+        position: relative;
     }
     &__david {
         height: 100%;
+        z-index: 10;
+        position: relative;
+        max-width: 800px;
+        width: 100%;
         svg {
             height: calc(100vh - 140px);
             width: auto;
         }
     }
     &__content {
+        max-width: 820px;
+        width: 100%;
         height: 100%;
         display: flex;
         flex-wrap: wrap;
@@ -26,6 +35,8 @@
         justify-content: flex-start;
         margin-left: -100px;
         padding-top: 70px;
+        position: relative;
+        z-index: 20;
         &__title,
         &__desc,
         &__btn {
@@ -49,6 +60,155 @@
             margin-bottom: 80px;
         }
         &__btn {
+        }
+    }
+    &__righttext {
+        position: absolute;
+        right: 30px;
+        bottom: 0;
+        span {
+            display: block;
+            background: url(../../img/svg/ux.svg);
+            width: 180px;
+            height: 632px;
+            background-position: bottom center;
+            background-repeat: no-repeat;
+            animation: rightText  5s;
+        }
+    }
+    &__bottom {
+        position: absolute;
+        display: flex;
+        bottom: 60px;
+        z-index: 30;
+        width: 100%;
+        left: 0;
+        padding-right: 30px;
+    }
+    &__down {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-45%);
+        font-family: 'Intro';
+        button {
+            animation: 5s ease-in-out 0s normal none infinite down;
+            background: transparent;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.5);
+            border: none;
+            outline: none;
+            padding: 0;
+            font-size: 12px;
+            padding: 10px 20px 50px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            span {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+            svg {
+                fill: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+    &__social {
+        margin-left: auto;
+    }
+}
+
+@keyframes rightText {
+    0% {
+        height: 0px;
+    }
+    100% {
+        height: 632px;
+    }
+}
+
+@keyframes down {
+    50% {
+        transform: translateY(15px)
+    }
+}
+
+@keyframes bg {
+    0% {
+        background: #040F29;
+    }
+    100% {
+        background: linear-gradient(69.95deg, #1C1E2B 0%, #000342 68.44%, #510339 111.1%);
+    }
+}
+
+@media (max-width: 1440px) {
+    .banner {
+        &__david {
+            max-width: 100%;
+        }
+        &__content {
+            &__title {
+                font-size: 80px;
+                line-height: 80px;
+                margin-bottom: 20px;
+            }
+            &__desc {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: $resp1200) {
+    .banner {
+        &__inner {
+            flex-wrap: wrap;
+            flex-flow: wrap;
+            min-height: calc(100vh - 90px);
+        }
+        &__david {
+            order: 1;
+            margin-left: auto;
+            svg {
+                width: auto;
+                height: 400px;
+            }
+        }
+        &__content {
+            margin-left: 0;
+            padding-top: 0;
+        }
+        &__social,
+        &__down {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: $resp768) {
+    .banner {
+        &__inner {
+            padding-top: 90px;
+        }
+        &__david {
+            max-width: 400px;
+            width: 100%;
+            svg {
+                height: auto;
+                width: 100%;
+            }
+        }
+        &__content {
+            margin-bottom: 50px;
+            &__title {
+                font-size: 30px;
+                line-height: 30px;
+            }
+            &__desc {
+                margin-bottom: 30px;
+            }
         }
     }
 }
