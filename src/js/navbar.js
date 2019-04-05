@@ -18,8 +18,8 @@
         var isClick = true
 
         $('#mobileMenu').on('click', function() {
+            $('body').addClass('is--mobmenu')
             if(!isOpen && isClick) {
-                console.log('Сработало 1')
                 isClick = false
                 anime({
                     targets: '.mobile__container',
@@ -47,7 +47,6 @@
                     }
                 })
             }else if(isOpen && isClick) {
-                console.log('Сработало 2')
                 isClick = false
                 $('#mobileMenu').removeClass('is--active')
                 anime({
@@ -66,11 +65,45 @@
                           });
                           isOpen = !isOpen
                           isClick = true
+                          $('body').removeClass('is--mobmenu')
                     }
                 })
             }
 
         })
+
+        var lastScrollTop = 0
+
+        $(document).scroll(function(e) {
+            toggleFixedNavbar()
+            var st = $(this).scrollTop()
+            if (st > lastScrollTop){
+                // hideNavbar()
+            } else {
+                showNavbar()
+            }
+            lastScrollTop = st
+        })
+
+        function toggleFixedNavbar() {
+            var scrollTop = $(document).scrollTop()
+            if(scrollTop > $('.navbar').innerHeight()) {
+                $('.navbar').addClass('is--fixed')
+                if(scrollTop > $('.navbar').innerHeight() + 130) {
+                    hideNavbar()
+                }
+            }else {
+                $('.navbar').removeClass('is--fixed')
+            }
+        }
+
+        function showNavbar() {
+            $('.navbar').removeClass('is--hide')
+        }
+
+        function hideNavbar() {
+            $('.navbar').addClass('is--hide')
+        }
 
     })
 })(jQuery);

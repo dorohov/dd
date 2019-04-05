@@ -24,3 +24,81 @@
         }
     }
 }
+
+@mixin bgLink($fontsite, $top, $mainColor, $subColor) {
+    font-size: $fontsite;
+    font-family: 'Intro';
+    font-weight: 900;
+    color: $mainColor;
+    position: relative;
+    &::after {
+        content: attr(data-txt);
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: $subColor;
+        overflow: hidden;
+        width: 0;
+        transition: .7s all ease;
+        white-space: nowrap;
+        z-index: 20;
+    }
+    &::before {
+        content: '';
+        width: 0;
+        height: $fontsite;
+        background: $mainColor;
+        position: absolute;
+        top: $top;
+        left: 0;
+        overflow: hidden;
+        transition: .7s all ease;
+        z-index: 10;
+    }
+    &:hover {
+        &::after,
+        &::before {
+            width: 100%;
+        }
+    }
+}
+
+@mixin animatedGradientBg() {
+    background: url(../../img/bg_frame1.jpg);
+    background-size: cover;
+    background-position: center;
+    animation: 8s ease-in-out 0s normal none infinite bg;
+}
+
+@keyframes bg {
+    0% {
+        background: url(../../img/bg_frame1.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    20% {
+        background: url(../../img/bg_frame2.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    40% {
+        background: url(../../img/bg_frame3.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    60% {
+        background: url(../../img/bg_frame4.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    80% {
+        background: url(../../img/bg_frame5.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    100% {
+        background: url(../../img/bg_frame1.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+}

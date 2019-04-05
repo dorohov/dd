@@ -1,3 +1,5 @@
+$navbarbg: #040F29;
+
 .navbar {
     position: fixed;
     height: 140px;
@@ -6,7 +8,29 @@
     top: 0;
     z-index: 100000;
     display: flex;
+    transition: .25s all ease;
     font-family: 'Intro';
+    &::after {
+        content: '';
+        background: $navbarbg;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        transition: .5s all ease;
+        transform: translateY(-150px);
+    }
+    &.is--hide {
+        transform: translateY(-100%);
+    }
+    &.is--fixed {
+        height: 100px;
+        &::after {
+            width: 100%;
+            transform: none;
+        }
+    }
     &__inner {
         @extend .container-xl;
         display: flex;
@@ -200,14 +224,17 @@
 
 @media (max-width: $resp1200) {
     .navbar {
-        height: 80px;
-        background: #040F29;
+        height: 80px !important;
+        transform: none !important;
         &__menu,
         &__phone {
             display: none;
         }
         &__mobilebtn {
             display: flex;
+        }
+        &__inner {
+            background: $navbarbg;
         }
     }
     .mobile__container {

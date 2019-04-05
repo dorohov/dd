@@ -1,0 +1,64 @@
+.portfolio {
+    overflow: hidden;
+    &__inner {
+        @extend .container-xl;
+    }
+    &__wrap {
+        max-width: 1315px;
+        width: 100%;
+        margin: 0 auto;
+        &__inner {
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 -30px;
+        }
+    }
+    &__block {
+        padding: 0 30px;
+        overflow: hidden;
+        max-width: 430px;
+        width: 100%;
+        &.is--visible {
+            .portfolio {
+                &__block {
+                    &__inner {
+                        transform: none;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        &__inner {
+            display: block;
+            transform: translateY(500px);
+            opacity: 0;
+            transition: 1s all ease;
+        }
+        &.is--right,
+        &.is--left {
+            margin-top: 100px;
+        }
+        &__img {
+            margin-bottom: 20px;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        &__title {
+            span {
+                font-size: 20px;
+                line-height: 23px;
+                color: $text;
+                font-weight: 700;
+                font-family: 'Intro';
+                position: relative;
+                &::after {
+                    content: url(../../img/svg/share.svg);
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+}

@@ -36,7 +36,7 @@
                 "transition": getRandomArbitrary(.5, 3) + 's all ease'
             })
 
-            console.log(thisTransform)
+            // console.log(thisTransform)
         })
 
         setTimeout(function() {

@@ -43,4 +43,32 @@
             }
         }
     }
+    &.is--black {
+        li {
+            a {
+                svg {
+                    fill: $text;
+                }
+                &:hover {
+                    svg {
+                        fill: $blue;
+                    }
+                }
+            }
+        }
+    }
+    &.is--blue {
+        li {
+            a {
+                svg {
+                    fill: $blue;
+                }
+                &:hover {
+                    svg {
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -1,0 +1,193 @@
+.footer {
+    background-image: url(../../img/footer_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    &__inner {
+        @extend .container-xl;
+        display: flex;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        &__email,
+        &__phone {
+            width: 100%;
+            margin-bottom: 30px;
+            a {
+                @include bgLink(24px, 4px, #fff, $blue);
+                color: #fff;
+            }
+        }
+        &__btn {
+            margin: auto 0 30px 0;
+        }
+    }
+    &__menus {
+        max-width: 730px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 30px;
+        &__inner {
+            margin: 0 -15px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+    }
+    &__menu {
+        padding: 0 15px;
+        &__title {
+            font-size: 18px;
+            line-height: 17px;
+            font-weight: 'Intro';
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+        ul {
+            li {
+                a,
+                span {
+                    display: block;
+                    padding: 5px;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: #fff;
+                }
+                a {
+                    margin-bottom: 5px;
+                    transition: .25s all ease;
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+        &.is--contacts {
+            ul {
+                max-width: 210px;
+            }
+        }
+    }
+    &__right {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    &__socials {
+        width: 100%;
+        &__list {
+            li {
+                margin-left: 30px !important;
+                &:first-child {
+                    margin-left: 0 !important;
+                }
+            }
+        }
+    }
+    &__cop {
+        margin-top: auto;
+        font-size: 14px;
+        line-height: 16px;
+        color: #fff;
+        text-align: right;
+    }
+}
+
+@media (max-width: $resp1200) {
+    .footer {
+        &__inner {
+            flex-wrap: wrap;
+        }
+        &__right {
+            max-width: 100%;
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: flex-end;
+            padding-top: 50px;
+        }
+        &__cop {
+            white-space: nowrap;
+            margin-top: 0;
+        }
+        &__info {
+            &__email,
+            &__phone {
+                margin-bottom: 15px;
+                a {
+                    @include bgLink(16px, 2px, #fff, $blue);
+                }
+            }
+        }
+        &__menus {
+            width: auto;
+            margin: 0 0 0 auto !important;
+        }
+        &__menu {
+            &__title {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: $resp1025) {
+    .footer {
+        &__inner {
+            flex-flow: wrap;
+        }
+        &__info {
+            max-width: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            &__email,
+            &__phone,
+            &__btn {
+                margin-bottom: 0;
+            }
+        }
+        &__menus {
+            max-width: 100%;
+            width: 100%;
+            padding: 0;
+            margin-bottom: 30px !important;
+            order: -1;
+        }
+    }
+}
+
+@media (max-width: $resp768) {
+    .footer {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        &__info {
+            flex-wrap: wrap;
+            &__btn {
+                display: none;
+            }
+            &__email,
+            &__phone {
+                margin-bottom: 10px;
+            }
+        }
+        &__right {
+            padding-top: 30px;
+            flex-wrap: wrap;
+        }
+        &__socials {
+            &__list {
+                margin-bottom: 50px;
+            }
+        }
+        &__menus {
+            display: none;
+        }
+    }
+}

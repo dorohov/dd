@@ -1,9 +1,10 @@
 .banner {
     min-height: 100vh;
     width: 100%;
-    background: #040F29;
+    // background: #040F29;
     // animation: 15s ease-in-out 0s normal none infinite bg;
     // background: linear-gradient(69.95deg, #1C1E2B 0%, #000342 68.44%, #510339 111.1%);
+    @include animatedGradientBg();
     display: flex;
     align-items: flex-end;
     &__inner {
@@ -134,15 +135,6 @@
     }
 }
 
-@keyframes bg {
-    0% {
-        background: #040F29;
-    }
-    100% {
-        background: linear-gradient(69.95deg, #1C1E2B 0%, #000342 68.44%, #510339 111.1%);
-    }
-}
-
 @media (max-width: 1440px) {
     .banner {
         &__david {
@@ -171,6 +163,7 @@
         &__david {
             order: 1;
             margin-left: auto;
+            margin-top: auto;
             svg {
                 width: auto;
                 height: 400px;
@@ -179,6 +172,7 @@
         &__content {
             margin-left: 0;
             padding-top: 0;
+            margin-bottom: 50px;
         }
         &__social,
         &__down {

@@ -1,0 +1,262 @@
+.form {
+    background: #EEEFF8;
+    overflow: hidden;
+    padding-top: 130px;
+    padding-bottom: 130px;
+    &__inner {
+        @extend .container-xl;
+        .heading {
+            margin-bottom: 50px;
+        }
+    }
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__left {
+        max-width: 650px;
+        min-width: 650px;
+        &__subtitle {
+            max-width: 300px;
+            font-size: 16px;
+            line-height: 18px;
+            color: $text;
+            margin-bottom: 50px;
+        }
+    }
+    &__group {
+        &.is--text {
+            position: relative;
+            margin-bottom: 50px;
+            label {
+                position: absolute;
+                color: #B2B2B2;
+                font-size: 14px;
+                line-height: 16px;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: .25s all ease;
+            }
+            span.is--border {
+                &::after {
+                    content: '';
+                    height: 1px;
+                    background: $blue;
+                    width: 0%;
+                    position: absolute;
+                    top: calc(100% - 1px);
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    transition: .5s all ease;
+                }
+            }
+            input[type="text"],
+            input[type="email"],
+            input[type="password"] {
+                padding: 15px 0;
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid #000;
+                display: block;
+                box-sizing: border-box;
+                width: 100%;
+                outline: none;
+                color: $text;
+                font-size: 16px;
+                line-height: 18px;
+            }
+            &.is--focus {
+                span {
+                    &.is--border {
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+                }
+                label {
+                    transform: translateY(-30px);
+                }
+            }
+            &.is--notempty {
+                label {
+                    transform: translateY(-30px);
+                }
+            }
+        }
+        &.is--file {
+            input[type="file"] {
+                display: none;
+            }
+            label {
+                position: relative;
+                color: #B2B2B2;
+                font-size: 18px;
+                line-height: 20px;
+                font-weight: 300;
+                cursor: pointer;
+                padding-left: 40px;
+                transition: .25s all ease;
+                &::before {
+                    content: url(../../img/svg/clip.svg);
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+                &:hover {
+                    color: $blue;
+                }
+                &.is--active {
+                    color: $blue;
+                }
+            }
+        }
+    }
+    &__cop {
+        display: flex;
+        margin-bottom: 80px;
+        &.is--resume__true {
+            .form {
+                &__cop {
+                    &__text {
+                        max-width: 350px;
+                    }
+                }
+            }
+        }
+        &.is--resume__false {
+            .form {
+                &__cop {
+                    &__text {
+                        padding-top: 10px;
+                    }
+                }
+            }
+        }
+        &__text {
+            width: 100%;
+            margin-left: auto;
+            font-size: 14px;
+            line-height: 16px;
+            color: $text;
+            font-family: 'Intro Light';
+            a {
+                font-family: 'Intro Book';
+                color: #000;
+                font-style: normal;
+                font-weight: 900;
+                transition: .25s all ease;
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+    }
+    &__right {
+        max-width: 500px;
+        width: 100%;
+        margin-left: auto;
+        padding-left: 30px;
+        transform: translateY(-90px);
+        position: relative;
+        z-index: 50;
+        &__city {
+            font-family: 'Intro';
+            font-weight: 900;
+            color: $text;
+            font-size: 36px;
+            line-height: 35px;
+            margin-bottom: 25px;
+        }
+        &__address {
+            font-size: 16px;
+            line-height: 18px;
+            color: $text;
+            margin-bottom: 80px;
+        }
+        &__links {
+            margin-bottom: 130px;
+            &__block {
+                margin-bottom: 30px;
+                &__label {
+                    color: $text;
+                    font-size: 16px;
+                    line-height: 18px;
+                }
+                a {
+                    @include bgLink(36px, 7px, $blue, #fff);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .form {
+        &__left,
+        &__right {
+            max-width: 100%;
+        }
+        &__right {
+            transform: none;
+            padding-left: 0;
+            &__address {
+                margin-bottom: 30px;
+            }
+            &__links {
+                margin-bottom: 30px;
+            }
+        }
+        &__left {
+            margin-bottom: 100px;
+        }
+    }
+}
+
+@media (max-width: $resp768) {
+    .form {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        .heading {
+            margin-bottom: 20px;
+        }
+        &__group {
+            margin-bottom: 30px !important;
+            &.is--file {
+                margin-bottom: 0 !important;
+            }
+        }
+        &__cop {
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            &__text {
+                max-width: 100% !important;
+                padding-top: 40px;
+            }
+        }
+        &__left {
+            min-width: 0;
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        &__right {
+            &__city {
+                font-size: 30px;
+                line-height: 30px;
+                margin-bottom: 15px;
+            }
+            &__links {
+                &__block {
+                    a {
+                        @include bgLink(18px, 4px, $blue, #fff);
+                    }
+                }
+            }
+            &__socials {
+                li {
+                    margin: 0 10px !important;
+                }
+            }
+        }
+    }
+}
