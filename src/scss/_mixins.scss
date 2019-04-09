@@ -61,10 +61,16 @@
             width: 100%;
         }
     }
+    @media (max-width: $resp768) {
+        &::after,
+        &::before {
+            content: none;
+        }
+    }
 }
 
 @mixin animatedGradientBg() {
-    background: url(../../img/bg_frame1.jpg);
+    background-image: url(../../img/bg_frame1.jpg);
     background-size: cover;
     background-position: center;
     animation: 8s ease-in-out 0s normal none infinite bg;
@@ -72,33 +78,39 @@
 
 @keyframes bg {
     0% {
-        background: url(../../img/bg_frame1.jpg);
+        background-image: url(../../img/bg_frame1.jpg);
         background-size: cover;
         background-position: center;
+        background-color: #230A46;
     }
     20% {
-        background: url(../../img/bg_frame2.jpg);
+        background-image: url(../../img/bg_frame2.jpg);
         background-size: cover;
         background-position: center;
+        background-color: #230A46;
     }
     40% {
-        background: url(../../img/bg_frame3.jpg);
+        background-image: url(../../img/bg_frame3.jpg);
         background-size: cover;
         background-position: center;
+        background-color: #230A46;
     }
     60% {
-        background: url(../../img/bg_frame4.jpg);
+        background-image: url(../../img/bg_frame4.jpg);
         background-size: cover;
         background-position: center;
+        background-color: #230A46;
     }
     80% {
-        background: url(../../img/bg_frame5.jpg);
+        background-image: url(../../img/bg_frame5.jpg);
         background-size: cover;
         background-position: center;
+        background-color: #230A46;
     }
     100% {
-        background: url(../../img/bg_frame1.jpg);
+        background-image: url(../../img/bg_frame1.jpg);
         background-size: cover;
         background-position: center;
+        background-color: #230A46;
     }
 }

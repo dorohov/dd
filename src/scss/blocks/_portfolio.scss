@@ -17,23 +17,10 @@
     &__block {
         padding: 0 30px;
         overflow: hidden;
-        max-width: 430px;
+        max-width: 33.3333333%;
         width: 100%;
-        &.is--visible {
-            .portfolio {
-                &__block {
-                    &__inner {
-                        transform: none;
-                        opacity: 1;
-                    }
-                }
-            }
-        }
         &__inner {
             display: block;
-            transform: translateY(500px);
-            opacity: 0;
-            transition: 1s all ease;
         }
         &.is--right,
         &.is--left {
@@ -59,6 +46,34 @@
                     padding-left: 10px;
                 }
             }
+        }
+    }
+}
+
+@media (max-width: $resp1025) {
+    .portfolio {
+        &__wrap {
+            &__inner {
+                margin: 0 -15px;
+            }
+        }
+        &__block {
+            max-width: 50%;
+            margin-bottom: 60px;
+            padding: 0 15px;
+            &.is--left,
+            &.is--right {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: $resp768) {
+    .portfolio {
+        &__block {
+            max-width: 100%;
+            margin-bottom: 30px;
         }
     }
 }

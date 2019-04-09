@@ -17,7 +17,7 @@
             width: 100%;
             margin-bottom: 30px;
             a {
-                @include bgLink(24px, 4px, #fff, $blue);
+                @include bgLink(24px, 4px, $blue, #fff);
                 color: #fff;
             }
         }
@@ -52,16 +52,36 @@
                 a,
                 span {
                     display: block;
-                    padding: 5px;
+                    padding: 5px 5px 5px 0;
                     font-size: 14px;
                     line-height: 16px;
                     color: #fff;
                 }
                 a {
                     margin-bottom: 5px;
-                    transition: .25s all ease;
-                    &:hover {
+                    transition: .2s all ease;
+                    position: relative;
+                    &::after {
+                        content: attr(data-overtext);
+                        position: absolute;
+                        left: -5px;
+                        top: 0px;
+                        overflow: hidden;
+                        width: 0;
                         color: $blue;
+                        transition: .9s all ease;
+                        white-space: nowrap;
+                        padding: 5px;
+                        background: #19182A;
+                        width: 0;
+                        visibility: hidden;
+                    }
+                    &:hover {
+                        color: transparent;
+                        &::after {
+                            visibility: visible;
+                            width: 100%;
+                        }
                     }
                 }
             }

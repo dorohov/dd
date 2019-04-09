@@ -1,7 +1,7 @@
-<header class="navbar">
+<header class="navbar is--@@type is--color--@@color">
     <div class="navbar__inner">
         <div class="navbar__logo">
-            <a href="#">
+            <a href="@@pages.index">
                 @@include('components.svg.html', {"name": "logo"})
             </a>
         </div>
@@ -9,10 +9,10 @@
             <ul>
                 <li class="is--active"><a href="#"><span>Портфолио</span></a></li>
                 <li><a href="#"><span>Услуги и цены</span></a></li>
-                <li><a href="#"><span>О нас</span></a></li>
-                <li><a href="#"><span>Блог</span></a></li>
+                <li><a href="@@pages.about"><span>О нас</span></a></li>
+                <li><a href="@@pages.blog"><span>Блог</span></a></li>
                 <li><a href="#"><span>Вакансии</span></a></li>
-                <li><a href="#"><span>Контакты</span></a></li>
+                <li><a href="@@pages.contacts"><span>Контакты</span></a></li>
             </ul>
         </nav>
         <div class="navbar__phone">

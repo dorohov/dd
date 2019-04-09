@@ -1,0 +1,164 @@
+.clients {
+    @include animatedGradientBg();
+    overflow: hidden;
+    &__inner {
+        @extend .container-xl;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__logo {
+        max-width: 20%;
+        width: 100%;
+        margin-bottom: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            span {
+                opacity: 1;
+            }
+        }
+        &__inner {
+            span {
+                display: block;
+                background-image: url(../../img/clients.png);
+                opacity: .5;
+                transition: .25s all ease;
+            }
+            &.is1 {
+                span {
+                    width: 98px;
+                    height: 80px;
+                    background-position: -192px -8px;
+                }
+            }
+            &.is2 {
+                span {
+                    width: 95px;
+                    height: 80px;
+                    background-position: -4px -945px;
+                }
+            }
+            &.is3 {
+                span {
+                    width: 93px;
+                    height: 81px;
+                    background-position: -9px -251px;
+                }
+            }
+            &.is4 {
+                span {
+                    width: 176px;
+                    height: 62px;
+                    background-position: 0px -694px;
+                }
+            }
+            &.is5 {
+                span {
+                    width: 192px;
+                    height: 55px;
+                    background-position: 0px -196px;
+                }
+            }
+            &.is6 {
+                span {
+                    width: 159px;
+                    height: 35px;
+                    background-position: 0px -428px;
+                }
+            }
+            &.is7 {
+                span {
+                    width: 90px;
+                    height: 90px;
+                    background-position: -3px -839px;
+                }
+            }
+            &.is8 {
+                span {
+                    width: 140px;
+                    height: 48px;
+                    background-position: 0px 0px;
+                }
+            }
+            &.is9 {
+                span {
+                    width: 111px;
+                    height: 78px;
+                    background-position: 0px -118px;
+                }
+            }
+            &.is10 {
+                span {
+                    width: 85px;
+                    height: 86px;
+                    background-position: 0px -337px;
+                }
+            }
+            &.is11 {
+                span {
+                    width: 154px;
+                    height: 70px;
+                    background-position: 0px -48px;
+                }
+            }
+            &.is12 {
+                span {
+                    width: 143px;
+                    height: 48px;
+                    background-position: 0px -540px;
+                }
+            }
+            &.is13 {
+                span {
+                    width: 181px;
+                    height: 52px;
+                    background-position: 0px -775px;
+                }
+            }
+            &.is14 {
+                span {
+                    width: 96px;
+                    height: 79px;
+                    background-position: 0px -605px;
+                }
+            }
+            &.is15 {
+                span {
+                    width: 104px;
+                    height: 52px;
+                    background-position: -186px -105px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $resp1200) {
+    .clients {
+        &__logo {
+            max-width: 25%;
+        }
+    }
+}
+
+@media (max-width: $resp1025) {
+    .clients {
+        &__logo {
+            max-width: 33.333333%;
+        }
+    }
+}
+
+@media (max-width: $resp768) {
+    .clients {
+        &__logo {
+            max-width: 50%;
+            transform: scale(.5);
+            margin-bottom: 0;
+        }
+    }
+}

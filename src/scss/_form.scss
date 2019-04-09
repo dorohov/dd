@@ -183,7 +183,8 @@
                     font-size: 16px;
                     line-height: 18px;
                 }
-                a {
+                a,
+                span {
                     @include bgLink(36px, 7px, $blue, #fff);
                 }
             }

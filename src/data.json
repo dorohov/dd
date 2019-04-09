@@ -11,6 +11,18 @@
         "instagram": "#"
     },
     "pages": {
-        "index": "index.html"
+        "index": "index.html",
+        "contacts": "contacts.html",
+        "blog": "blog.html",
+        "article": "article.html",
+        "services": "services.html",
+        "service.adv": "service.adv.html",
+        "service.marketing": "service.marketing.html",
+        "service.support": "service.support.html",
+        "service.site": "service.site.html",
+        "service.poly": "service.poly.html",
+        "service.smm": "service.smm.html",
+        "service.seo": "service.seo.html",
+        "service.style": "service.style.html"
     }
 }

@@ -21,6 +21,9 @@ $navbarbg: #040F29;
         transition: .5s all ease;
         transform: translateY(-150px);
     }
+    &.is--dark {
+        background: $navbarbg;
+    }
     &.is--hide {
         transform: translateY(-100%);
     }
@@ -29,6 +32,44 @@ $navbarbg: #040F29;
         &::after {
             width: 100%;
             transform: none;
+        }
+        .navbar {
+            &__logo {
+                svg {
+                    fill: #fff !important;
+                }
+            }
+            &__menu a,
+            &__phone span {
+                color: #fff !important;
+            }
+        }
+    }
+    &.is--color {
+        &--dark {
+            .navbar {
+                &__logo {
+                    svg {
+                        fill: #1C1E2B;
+                    }
+                }
+                &__menu {
+                    ul {
+                        li {
+                            a {
+                                color: #1C1E2B;
+                            }
+                        }
+                    }
+                }
+                &__phone {
+                    a {
+                        span {
+                            color: #1C1E2B;
+                        }
+                    }
+                }
+            }
         }
     }
     &__inner {
@@ -226,6 +267,11 @@ $navbarbg: #040F29;
     .navbar {
         height: 80px !important;
         transform: none !important;
+        &__logo {
+            svg {
+                fill: #fff !important;
+            }
+        }
         &__menu,
         &__phone {
             display: none;

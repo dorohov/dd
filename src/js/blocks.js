@@ -68,7 +68,7 @@
         /////////////////////////////////////////////////////////////////////////
 
         $(document).scroll(function() {
-            var portfolio__block  = $('.portfolio__block')
+            var portfolio__block  = $('.visblock')
 
             portfolio__block.each(function() {
                 if($(this).visible(true)) {
