@@ -73,6 +73,7 @@
         })
 
         var lastScrollTop = 0
+        toggleFixedNavbar()
 
         $(document).scroll(function(e) {
             toggleFixedNavbar()

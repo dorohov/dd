@@ -1,0 +1,42 @@
+<div class="servicescur__top is--@@type">
+    <div class="servicescur__top__inner">
+        <div class="servicescur__top__wrap">
+            <div class="servicescur__top__menu">
+                <div class="servicescur__top__menu__container">
+                    <ul>
+                        <li><a href="#" data-txt="Разработка сайтов">Разработка сайтов</a></li>
+                        <li><a href="#" data-txt="Контекстная реклама">Контекстная реклама</a></li>
+                        <li><a href="#" data-txt="Таргетинг+SMM">Таргетинг+SMM</a></li>
+                        <li><a href="#" data-txt="SEO - продвижение">SEO - продвижение</a></li>
+                        <li class="is--active"><a href="#" data-txt="Фирменный стиль">Фирменный стиль</a></li>
+                        <li><a href="#" data-txt="Техническая поддержка">Техническая поддержка</a></li>
+                        <li><a href="#" data-txt="Полиграфия">Полиграфия</a></li>
+                        <li><a href="#" data-txt="Маркетинговое исследование">Маркетинговое исследование</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="servicescur__top__info">
+                <div class="servicescur__top__info__title">@@title</div>
+                <div class="servicescur__top__info__price">Цены от @@price</div>
+                <div class="servicescur__top__info__btn">
+                    <a href="#" class="btn">Оформить заявку</a>
+                </div>
+                <div class="servicescur__top__info__list">
+                    <ul>
+                        @@for(var i = 0; i < items.length; i++) {
+                            <li>
+                                <div class="servicescur__top__info__list__icon">
+                                    @@include('../components/components.svg.html', {"name": "`+items[i].icon+`"})
+                                </div>
+                                <div class="servicescur__top__info__list__text">`+items[i].text+`</div>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+            <div class="servicescur__top__ill is--@@type">
+                @@include('../illustrations/@@type.html')
+            </div>
+        </div>
+    </div>
+</div>

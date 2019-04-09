@@ -23,6 +23,7 @@
         "service.poly": "service.poly.html",
         "service.smm": "service.smm.html",
         "service.seo": "service.seo.html",
-        "service.style": "service.style.html"
+        "service.style": "service.style.html",
+        "portfolio": "portfolio.html"
     }
 }

@@ -1,46 +1,62 @@
 <div class="services slide">
-    <div class="services__inner bgtext" data-bgtext="services">
-        <div class="heading is--black">Что мы <br> предлагаем</div>
+    <div class="services__inner bgtext bgtext--@@maincolor" data-bgtext="services">
+        <div class="heading is--@@maincolor">@@maintitle</div>
         <div class="services__wrap">
             @@include('blocks.services.block.html', {
                 "title": "Разработка <br> сайтов",
                 "desc": "Создаем web — проекты любой сложности: от эффектной промо — страницы до сложного портала",
-                "color": "blue"
+                "color": "blue",
+                "maincolor": "@@maincolor",
+                "url": "@@pages.service.site"
             })
             @@include('blocks.services.block.html', {
                 "title": "Контекстная <br> реклама",
                 "desc": "Настроим прибыльную рекламную кампанию в Яндекс.Директ/Google Реклама",
-                "color": "purple"
+                "color": "purple",
+                "maincolor": "@@maincolor",
+                "url": "@@pages.service.adv"
             })
             @@include('blocks.services.block.html', {
                 "title": "Маркетинговое <br> исследование",
                 "desc": "Предоставим вам детальный анализ рыночной ситуации с вариантами дальнейшей стратегии развития",
-                "color": "blue"
+                "color": "blue",
+                "maincolor": "@@maincolor",
+                "url": "@@pages.service.marketing"
             })
             @@include('blocks.services.block.html', {
                 "title": "Таргетинг + SMM <br> продвижение",
                 "desc": "Эффективная реклама и постоянный контакт с аудиторией (клиентами) в социальных сетях",
-                "color": "pink"
+                "color": "pink",
+                "maincolor": "@@maincolor",
+                "url": "@@pages.service.smm"
             })
             @@include('blocks.services.block.html', {
                 "title": "SEO- <br> продвижение",
                 "desc": "Выведем Ваш сайт в ТОП-5 поисковых систем Яндекс и Google",
-                "color": "dblue"
+                "color": "dblue",
+                "maincolor": "@@maincolor",
+                "url": "@@pages.service.seo"
             })
             @@include('blocks.services.block.html', {
                 "title": "Техническая <br> поддержка",
                 "desc": "Окажем полную техническую и дизайнерскую поддержку вашему сайту",
-                "color": "green"
+                "color": "green",
+                "maincolor": "@@maincolor",
+                "url": "@@pages.service.support"
             })
             @@include('blocks.services.block.html', {
                 "title": "Фирменный <br> стиль",
                 "desc": "Ваш продукт не останется без внимания покупателей",
-                "color": "pink"
+                "color": "pink",
+                "maincolor": "@@maincolor",
+                "url": "@@pages.service.style"
             })
             @@include('blocks.services.block.html', {
                 "title": "Полиграфия",
                 "desc": "Листовки, буклеты, каталоги, упаковка, визитки, календари и другая рекламная продукция",
-                "color": "blue"
+                "color": "blue",
+                "maincolor": "@@maincolor",
+                "url": "@@pages.service.poly"
             })
         </div>
     </div>

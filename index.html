@@ -13,10 +13,12 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>Главная - DorohovDesign</title>
+    <link rel="stylesheet" href="dist/css/jquery.fancybox.css">
     <link rel="stylesheet" href="dist/css/style.css">
 </head>
 
 <body>
+    <script src="dist/js/loader.js"></script>
     <header class="navbar is--transparent is--color--white">
         <div class="navbar__inner">
             <div class="navbar__logo">
@@ -28,8 +30,8 @@
             </div>
             <nav class="navbar__menu">
                 <ul>
-                    <li class="is--active"><a href="#"><span>Портфолио</span></a></li>
-                    <li><a href="#"><span>Услуги и цены</span></a></li>
+                    <li class="is--active"><a href="@@pages.portfolio"><span>Портфолио</span></a></li>
+                    <li><a href="services.html"><span>Услуги и цены</span></a></li>
                     <li><a href="@@pages.about"><span>О нас</span></a></li>
                     <li><a href="blog.html"><span>Блог</span></a></li>
                     <li><a href="#"><span>Вакансии</span></a></li>
@@ -62,12 +64,12 @@
     <div class="mobile__container">
         <nav class="mobile__container__menu">
             <ul>
-                <li class="is--active"><a href="#" class="__mobLink"><span>Портфолио</span></a></li>
-                <li><a href="#" class="__mobLink"><span>Услуги и цены</span></a></li>
-                <li><a href="#" class="__mobLink"><span>О нас</span></a></li>
-                <li><a href="#" class="__mobLink"><span>Блог</span></a></li>
+                <li class="is--active"><a href="@@pages.portfolio" class="__mobLink"><span>Портфолио</span></a></li>
+                <li><a href="services.html" class="__mobLink"><span>Услуги и цены</span></a></li>
+                <li><a href="@@pages.about" class="__mobLink"><span>О нас</span></a></li>
+                <li><a href="blog.html" class="__mobLink"><span>Блог</span></a></li>
                 <li><a href="#" class="__mobLink"><span>Вакансии</span></a></li>
-                <li><a href="#" class="__mobLink"><span>Контакты</span></a></li>
+                <li><a href="contacts.html" class="__mobLink"><span>Контакты</span></a></li>
             </ul>
         </nav>
         <div class="mobile__container__phone">
@@ -209,11 +211,11 @@
             </div>
         </div>
         <div class="services slide">
-            <div class="services__inner bgtext" data-bgtext="services">
+            <div class="services__inner bgtext bgtext--black" data-bgtext="services">
                 <div class="heading is--black">Что мы <br> предлагаем</div>
                 <div class="services__wrap">
-                    <div class="services__block is--blue">
-                        <a href="#" class="services__block__link is--blue">
+                    <div class="services__block is--blue is--m_black">
+                        <a href="service.site.html" class="services__block__link is--blue">
                             <div class="services__block__bg"></div>
                             <div class="services__block__inner">
                                 <div class="services__block__title">Разработка <br> сайтов</div>
@@ -221,8 +223,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="services__block is--purple">
-                        <a href="#" class="services__block__link is--purple">
+                    <div class="services__block is--purple is--m_black">
+                        <a href="service.adv.html" class="services__block__link is--purple">
                             <div class="services__block__bg"></div>
                             <div class="services__block__inner">
                                 <div class="services__block__title">Контекстная <br> реклама</div>
@@ -230,8 +232,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="services__block is--blue">
-                        <a href="#" class="services__block__link is--blue">
+                    <div class="services__block is--blue is--m_black">
+                        <a href="service.marketing.html" class="services__block__link is--blue">
                             <div class="services__block__bg"></div>
                             <div class="services__block__inner">
                                 <div class="services__block__title">Маркетинговое <br> исследование</div>
@@ -239,8 +241,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="services__block is--pink">
-                        <a href="#" class="services__block__link is--pink">
+                    <div class="services__block is--pink is--m_black">
+                        <a href="service.smm.html" class="services__block__link is--pink">
                             <div class="services__block__bg"></div>
                             <div class="services__block__inner">
                                 <div class="services__block__title">Таргетинг + SMM <br> продвижение</div>
@@ -248,8 +250,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="services__block is--dblue">
-                        <a href="#" class="services__block__link is--dblue">
+                    <div class="services__block is--dblue is--m_black">
+                        <a href="service.seo.html" class="services__block__link is--dblue">
                             <div class="services__block__bg"></div>
                             <div class="services__block__inner">
                                 <div class="services__block__title">SEO- <br> продвижение</div>
@@ -257,8 +259,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="services__block is--green">
-                        <a href="#" class="services__block__link is--green">
+                    <div class="services__block is--green is--m_black">
+                        <a href="service.support.html" class="services__block__link is--green">
                             <div class="services__block__bg"></div>
                             <div class="services__block__inner">
                                 <div class="services__block__title">Техническая <br> поддержка</div>
@@ -266,8 +268,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="services__block is--pink">
-                        <a href="#" class="services__block__link is--pink">
+                    <div class="services__block is--pink is--m_black">
+                        <a href="service.style.html" class="services__block__link is--pink">
                             <div class="services__block__bg"></div>
                             <div class="services__block__inner">
                                 <div class="services__block__title">Фирменный <br> стиль</div>
@@ -275,8 +277,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="services__block is--blue">
-                        <a href="#" class="services__block__link is--blue">
+                    <div class="services__block is--blue is--m_black">
+                        <a href="service.poly.html" class="services__block__link is--blue">
                             <div class="services__block__bg"></div>
                             <div class="services__block__inner">
                                 <div class="services__block__title">Полиграфия</div>
@@ -582,6 +584,11 @@
         <div class="geometry__line is--center"></div>
         <div class="geometry__line is--right"></div>
     </div>
+    <div id="preloader" class="preloader">
+        <div class="preloader__logo">
+
+        </div>
+    </div>
     <script src="dist/js/jquery-3.3.1.min.js"></script>
     <script src="dist/js/jquery.visible.min.js"></script>
     <!-- <script src="dist/js/svg.min.js"></script> -->
@@ -589,6 +596,7 @@
     <script src="dist/js/prefixfree.dynamic-dom.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script> -->
     <script src="dist/js/anime.min.js"></script>
+    <script src="dist/js/jquery.fancybox.min.js"></script>
     <script src="dist/js/main.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANLxdBSU8fJGR5IzCxzgTbVTdgOsJXcq4&callback=initMap"></script>
 </body>
