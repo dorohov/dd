@@ -1,0 +1,19 @@
+<div class="services-infoblocks slide is--bg_@@bg">
+    <div class="services-infoblocks__inner bgtext" data-bgtext="@@bg_text">
+        <div class="heading is--black">@@title</div>
+        <div class="services-infoblocks__wrap">
+            <ul class="is--cols@@cols">
+                @@for(var i = 0; i < items.length; i++) {
+                    <li>
+                        <div class="services-infoblocks__block" data-id="`+items[i].id+`">
+                            <div class="services-infoblocks__block__inner">
+                                <div class="services-infoblocks__block__title">`+items[i].title+`</div>
+                                <div class="services-infoblocks__block__desc">`+items[i].desc+`</div>
+                            </div>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

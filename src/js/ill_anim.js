@@ -47,5 +47,10 @@
             })
         }, 1000)
 
+        var ill_s = $('.servicescur__top__ill span').tilt()
+        ill_s.on('change', function(e, transforms){
+            console.log(e, transforms)
+        });
+
     })
 })(jQuery);

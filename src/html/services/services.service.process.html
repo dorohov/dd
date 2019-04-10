@@ -1,0 +1,17 @@
+<div class="services-process slide is--bg_@@bg">
+    <div class="services-process__inner bgtext bgtext--white" data-bgtext="@@bg_text">
+        <div class="heading is--black">@@title</div>
+        <div class="services-process__wrap">
+            @@for(var i = 0; i < items.length; i++) {
+                <div class="services-process__block is--`+items[i].align+`">
+                    <div class="services-process__block__inner">
+                        <div class="services-process__block__circle">
+                            <span class="is--`+items[i].color+`">`+items[i].id+`</span>
+                        </div>
+                        <div class="services-process__block__text">`+items[i].desc+`</div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

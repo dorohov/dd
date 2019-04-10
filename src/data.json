@@ -24,6 +24,9 @@
         "service.smm": "service.smm.html",
         "service.seo": "service.seo.html",
         "service.style": "service.style.html",
-        "portfolio": "portfolio.html"
+        "portfolio": "portfolio.html",
+        "about": "about.html",
+        "jobs": "jobs.html",
+        "vacancy": "vacancy.html"
     }
 }

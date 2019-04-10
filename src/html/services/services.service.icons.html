@@ -1,0 +1,19 @@
+<div class="services-icons slide is--bg_@@bg">
+    <div class="services-icons__inner bgtext" data-bgtext="@@bg_text">
+        <div class="heading is--black">@@title</div>
+        <div class="services-icons__wrap">
+            <ul>
+                @@for(var i = 0; i < items.length; i++) {
+                    <li>
+                        <div class="services-icons__block">
+                            <div class="services-icons__block__icon">
+                                <img src="img/svg/`+items[i].icon+`.svg" alt="">
+                            </div>
+                            <div class="services-icons__block__text">`+items[i].text+`</div>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
