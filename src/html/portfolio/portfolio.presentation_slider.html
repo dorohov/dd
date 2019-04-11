@@ -1,0 +1,45 @@
+<div class="presentation">
+    <div class="presentation__carousel">
+        <div class="presentation__carousel__items">
+            <div class="presentation__carousel__block">
+                <img src="img/presentation_carousel1.jpg" alt="">
+            </div>
+            <div class="presentation__carousel__block">
+                <img src="img/presentation_carousel2.jpg" alt="">
+            </div>
+            <div class="presentation__carousel__block">
+                <img src="img/presentation_carousel3.jpg" alt="">
+            </div>
+            <div class="presentation__carousel__block">
+                <img src="img/presentation_carousel4.jpg" alt="">
+            </div>
+            <div class="presentation__carousel__block">
+                <img src="img/presentation_carousel5.jpg" alt="">
+            </div>
+            <div class="presentation__carousel__block">
+                <img src="img/presentation_carousel6.jpg" alt="">
+            </div>
+            <div class="presentation__carousel__block">
+                <img src="img/presentation_carousel7.jpg" alt="">
+            </div>
+        </div>
+        <div class="presentation__carousel__arrows">
+            <button class="presentation__carousel__arrow is--prev">
+                @@include('../components/components.svg.html', {"name": "carousel_arrow"})
+            </button>
+            <button class="presentation__carousel__arrow is--next">
+                @@include('../components/components.svg.html', {"name": "carousel_arrow"})
+            </button>
+        </div>
+    </div>
+    <div class="presentation__next">
+        <a href="#">
+            <span>Следующий проект</span>
+            @@include('../components/components.svg.html', {"name": "share"})
+        </a>
+    </div>
+    @@include('../blocks/blocks.form.main.html', {
+        "title": "Обсудим Ваш <br> проект?",
+        "resume": "false"
+    })
+</div>

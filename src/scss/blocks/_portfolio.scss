@@ -48,6 +48,104 @@
             }
         }
     }
+    &page {
+        overflow: hidden;
+        &__inner {
+            @extend .container-xl;
+            .blog__menu {
+                ul {
+                    justify-content: flex-start;
+                    margin: 0 -20px;
+                    li {
+                        padding-left: 20px;
+                        padding-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.presentation {
+    padding-top: 140px;
+    z-index: 9999;
+    position: relative;
+    &__fake {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__carousel {
+        position: relative;
+        &__block {
+            img {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+        &__arrows {
+            button {
+                position: absolute;
+                top: 0;
+                border: none;
+                height: 100%;
+                outline: none;
+                cursor: pointer;
+                background: transparent;
+                padding-left: 60px;
+                padding-right: 50px;
+                transition: .25s all ease;
+                &:hover {
+                    background: rgba(#000, .5);
+                }
+                svg {
+                    fill: #fff;
+                }
+                &.is--next {
+                    transform: rotate(180deg);
+                    right: 0;
+                }
+                &.is--prev {
+                    left: 0;
+                }
+            }
+        }
+    }
+    &__next {
+        @include animatedGradientBg();
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            height: 200px;
+            span {
+                font-size: 36px;
+                line-height: 36px;
+                color: #fff;
+                display: block;
+                margin-right: 20px;
+            }
+            svg {
+                width: 27px;
+                height: 27px;
+                fill: #fff;
+                transition: .5s all ease;
+            }
+            &:hover {
+                svg {
+                    transform: translateX(15px);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $resp1200) {
+    .presentation {
+        padding-top: 80px;
+    }
 }
 
 @media (max-width: $resp1025) {
@@ -74,6 +172,32 @@
         &__block {
             max-width: 100%;
             margin-bottom: 30px;
+        }
+    }
+    .presentation {
+        &__carousel {
+            &__arrows {
+                button {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    svg {
+                        width: 20px;
+                    }
+                }
+            }
+        }
+        &__next {
+            a {
+                height: 100px;
+                span {
+                    font-size: 20px;
+                    margin-right: 5px;
+                }
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
         }
     }
 }

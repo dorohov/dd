@@ -1,0 +1,32 @@
+<div class="jobs">
+    <div class="jobs__top page">
+        <div class="jobs__top__wrap slide">
+            <div class="jobs__top__wrap__inner bgtext bgtext--white" data-bgtext="vacancies">
+                <div class="jobs__top__list">
+                    <div class="heading is--white jobsImageHeading">Вакансии</div>
+                    <div class="jobs__top__list__container">
+                        @@include('../blocks/blocks.services.block.html', {
+                            "title": "Веб - <br> разработчик",
+                            "desc": "Мы ищем опытного веб - разработчика, который не боиться сложных задач и способен быстро включиться в работу",
+                            "color": "blue",
+                            "maincolor": "white",
+                            "url": "@@pages.vacancy"
+                        })
+                        @@include('../blocks/blocks.services.block.html', {
+                            "title": "Интернет - <br> маркетолог",
+                            "desc": "Наша команда ищет креативного, широко мыслящего интернет - маркетолога, который может генерировать новые идеи, которому важны разноплановые и интересные проекты",
+                            "color": "pink",
+                            "maincolor": "white",
+                            "url": "@@pages.vacancy"
+                        })
+                    </div>
+                </div>
+                <div class="jobs__top__img">@@include('../illustrations/jobs.html')</div>
+            </div>
+        </div>
+    </div>
+</div>
+@@include('../blocks/blocks.form.main.html', {
+    "title": "Обсудим Ваш <br> проект?",
+    "resume": "false"
+})

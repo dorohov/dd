@@ -1,0 +1,131 @@
+.jobs {
+    &__top {
+        overflow: hidden;
+        @include animatedGradientBg();
+        &__wrap {
+            &__inner {
+                @extend .container-xl;
+                display: flex;
+                position: relative;
+            }
+        }
+        &__list {
+            &__container {
+                display: flex;
+                max-width: 1300px;
+                width: 100%;
+                padding-right: 400px;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin: 0 -30px;
+                .services__block {
+                    max-width: 47%;
+                }
+            }
+        }
+        &__img {
+            position: absolute;
+            right: 50px;
+            top: -150px;
+        }
+        &__desc {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -30px;
+            &__block {
+                padding: 0 30px;
+                &:first-child {
+                    max-width: 100%;
+                }
+                margin-bottom: 70px;
+                max-width: 50%;
+                width: 100%;
+                &__title {
+                    font-family: 'Intro';
+                    font-weight: 900;
+                    font-size: 24px;
+                    line-height: 21px;
+                    color: #fff;
+                    margin-bottom: 20px;
+                }
+                &__desc {
+                    p {
+                        margin: 0 0 15px 0;
+                        line-height: 18px;
+                        font-size: 16px;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.jobsImageHidden {
+    opacity: 0;
+    transition: .25s all ease;
+    &.jobsImageHidden-visible {
+        opacity: 1;
+    }
+}
+
+.jobsImageTarget {
+    cursor: pointer;
+    opacity: 0;
+}
+
+@media (max-width: $resp1200) {
+    .jobs {
+        &__top {
+            &__list {
+                &__container {
+                    max-width: 100%;
+                    padding: 0;
+                }
+            }
+            &__img {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: $resp1025) {
+    .jobs {
+        &__top {
+            &__desc {
+                &__block {
+                    max-width: 100% !important;
+                    margin-bottom: 20px;
+                    &__title {
+                        font-size: 22px;
+                    }
+                    &__desc {
+                        p {
+                            font-size: 14px;
+                            line-height: 16px;
+                            br {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $resp768) {
+    .jobs {
+        &__top {
+            &__list {
+                &__container {
+                    margin: 0 -15px !important;
+                }
+                .services__block {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

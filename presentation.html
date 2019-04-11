@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#200e53">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Сайт для компании Aegospotami — DorohovDesign</title>
+    <link rel="stylesheet" href="dist/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+</head>
+
+<body>
+    <script src="dist/js/loader.js"></script>
+    <header class="navbar is--dark is--color--white">
+        <div class="navbar__inner">
+            <div class="navbar__logo">
+                <a href="index.html">
+                    <svg class="svg-logo-dims svg is--logo">
+                        <use xlink:href="img/svg/sprites.svg#logo"></use>
+                    </svg>
+                </a>
+            </div>
+            <nav class="navbar__menu">
+                <ul>
+                    <li class="is--active"><a href="portfolio.html"><span>Портфолио</span></a></li>
+                    <li><a href="services.html"><span>Услуги и цены</span></a></li>
+                    <li><a href="about.html"><span>О нас</span></a></li>
+                    <li><a href="blog.html"><span>Блог</span></a></li>
+                    <li><a href="jobs.html"><span>Вакансии</span></a></li>
+                    <li><a href="contacts.html"><span>Контакты</span></a></li>
+                </ul>
+            </nav>
+            <div class="navbar__phone">
+                <a href="tel:88002013106">
+                    <svg class="svg-call-dims svg is--call">
+                        <use xlink:href="img/svg/sprites.svg#call"></use>
+                    </svg>
+                    <span>+7 (800) 201-31-06</span>
+                </a>
+            </div>
+            <div class="navbar__mobilebtn">
+                <button id="mobileMenu">
+                    <span class="dot is1 is--blue"></span>
+                    <span class="dot is2 is--purple"></span>
+                    <span class="dot is3 is--pink"></span>
+                    <span class="dot is4 is--pink"></span>
+                    <span class="dot is5 is--dblue"></span>
+                    <span class="dot is6 is--green"></span>
+                    <span class="dot is7 is--purple"></span>
+                    <span class="dot is8 is--green"></span>
+                    <span class="dot is9 is--blue"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="mobile__container">
+        <nav class="mobile__container__menu">
+            <ul>
+                <li class="is--active"><a href="portfolio.html" class="__mobLink"><span>Портфолио</span></a></li>
+                <li><a href="services.html" class="__mobLink"><span>Услуги и цены</span></a></li>
+                <li><a href="about.html" class="__mobLink"><span>О нас</span></a></li>
+                <li><a href="blog.html" class="__mobLink"><span>Блог</span></a></li>
+                <li><a href="jobs.html" class="__mobLink"><span>Вакансии</span></a></li>
+                <li><a href="contacts.html" class="__mobLink"><span>Контакты</span></a></li>
+            </ul>
+        </nav>
+        <div class="mobile__container__phone">
+            <a href="tel:88002013106" class="__mobLink">
+                <svg class="svg-call-dims svg is--call">
+                    <use xlink:href="img/svg/sprites.svg#call"></use>
+                </svg>
+                <span>+7 (800) 201-31-06</span>
+            </a>
+        </div>
+        <div class="mobile__container__socials">
+            <span class="__mobLink">
+                <ul class="social is--white is--center">
+                    <li><a href="#"><svg class="svg-behance-dims svg is--behance">
+                                <use xlink:href="img/svg/sprites.svg#behance"></use>
+                            </svg></a></li>
+                    <li><a href="#"><svg class="svg-vk-dims svg is--vk">
+                                <use xlink:href="img/svg/sprites.svg#vk"></use>
+                            </svg></a></li>
+                    <li><a href="#"><svg class="svg-facebook-dims svg is--facebook">
+                                <use xlink:href="img/svg/sprites.svg#facebook"></use>
+                            </svg></a></li>
+                    <li><a href="#"><svg class="svg-twitter-dims svg is--twitter">
+                                <use xlink:href="img/svg/sprites.svg#twitter"></use>
+                            </svg></a></li>
+                    <li><a href="#"><svg class="svg-instagram-dims svg is--instagram">
+                                <use xlink:href="img/svg/sprites.svg#instagram"></use>
+                            </svg></a></li>
+                </ul>
+            </span>
+        </div>
+    </div>
+    <main>
+        <div class="presentation">
+            <div class="presentation__fake"><img src="img/fake_presentation.jpg" alt=""></div>
+            <div class="presentation__next">
+                <a href="#">
+                    <span>Следующий проект</span>
+                    <svg class="svg-share-dims svg is--share">
+                        <use xlink:href="img/svg/sprites.svg#share"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="form slide">
+                <div class="form__inner bgtext" data-bgtext="contacts">
+                    <div class="heading is--black">Обсудим Ваш <br> проект?</div>
+                    <div class="form__wrap">
+                        <form class="form__left">
+                            <div class="form__left__subtitle">Заполните форму ниже и мы свяжемся с вами в ближайшее время.</div>
+                            <div class="form__group is--text">
+                                <input type="text" name="name" id="name">
+                                <span class="is--border"></span>
+                                <label for="name">Имя</label>
+                            </div>
+                            <div class="form__group is--text">
+                                <input type="text" name="phone" id="phone">
+                                <span class="is--border"></span>
+                                <label for="phone">Телефон</label>
+                            </div>
+                            <div class="form__group is--text">
+                                <input type="email" name="mail" id="mail">
+                                <span class="is--border"></span>
+                                <label for="mail">Почта</label>
+                            </div>
+                            <div class="form__cop is--resume__false">
+
+                                <div class="form__cop__text">
+                                    Нажимая «Отправить», вы соглашаетесь с <a href="#">политикой использования персональных данных</a>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn is--black">Отправить</button>
+                        </form>
+                        <div class="form__right">
+                            <div class="form__right__city">г. Орел</div>
+                            <div class="form__right__address">ул. Бульвар Победы, д. 6, 4 этаж, <br> офис 52</div>
+                            <div class="form__right__links">
+                                <div class="form__right__links__block">
+                                    <div class="form__right__links__block__label">Пиши</div>
+                                    <a href="mailto:hello@dorohovdesign.com" data-txt="hello@dorohovdesign.com">hello@dorohovdesign.com</a>
+                                </div>
+                                <div class="form__right__links__block">
+                                    <div class="form__right__links__block__label">Звони</div>
+                                    <a href="tel:88002013106" data-txt="+7 (800) 201-31-06">+7 (800) 201-31-06</a>
+                                </div>
+                            </div>
+                            <div class="form__right__socials">
+                                <ul class="social is--black is--left">
+                                    <li><a href="#"><svg class="svg-behance-dims svg is--behance">
+                                                <use xlink:href="img/svg/sprites.svg#behance"></use>
+                                            </svg></a></li>
+                                    <li><a href="#"><svg class="svg-vk-dims svg is--vk">
+                                                <use xlink:href="img/svg/sprites.svg#vk"></use>
+                                            </svg></a></li>
+                                    <li><a href="#"><svg class="svg-facebook-dims svg is--facebook">
+                                                <use xlink:href="img/svg/sprites.svg#facebook"></use>
+                                            </svg></a></li>
+                                    <li><a href="#"><svg class="svg-twitter-dims svg is--twitter">
+                                                <use xlink:href="img/svg/sprites.svg#twitter"></use>
+                                            </svg></a></li>
+                                    <li><a href="#"><svg class="svg-instagram-dims svg is--instagram">
+                                                <use xlink:href="img/svg/sprites.svg#instagram"></use>
+                                            </svg></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__info">
+                <div class="footer__info__email">
+                    <a href="mailto:hello@dorohovdesign.com" data-txt="hello@dorohovdesign.com">hello@dorohovdesign.com</a>
+                </div>
+                <div class="footer__info__phone">
+                    <a href="tel:88002013106" data-txt="+7 (800) 201-31-06">+7 (800) 201-31-06</a>
+                </div>
+                <div class="footer__info__btn">
+                    <a href="#" class="btn">Заказать</a>
+                </div>
+            </div>
+            <div class="footer__menus">
+                <div class="footer__menus__inner">
+                    <div class="footer__menu is--services">
+                        <div class="footer__menu__title">Услуги</div>
+                        <ul>
+                            <li><a href="service.site.html" data-overtext="Разработка сайтов">Разработка сайтов</a></li>
+                            <li><a href="service.adv.html" data-overtext="Контекстная реклама">Контекстная реклама</a></li>
+                            <li><a href="service.smm.html" data-overtext="Таргетинг+SMM">Таргетинг+SMM</a></li>
+                            <li><a href="service.seo.html" data-overtext="SEO — продвижение">SEO — продвижение</a></li>
+                            <li><a href="service.style.html" data-overtext="Фирменный стиль">Фирменный стиль</a></li>
+                            <li><a href="service.support.html" data-overtext="Техническая поддержка">Техническая поддержка</a></li>
+                            <li><a href="service.poly.html" data-overtext="Полиграфия">Полиграфия</a></li>
+                            <li><a href="service.marketing.html" data-overtext="Маркетинговое исследование">Маркетинговое исследование</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__menu is--studio">
+                        <div class="footer__menu__title">Студия</div>
+                        <ul>
+                            <li><a href="about.html" data-overtext="О нас">О нас</a></li>
+                            <li><a href="portfolio.html" data-overtext="Портфолио">Портфолио</a></li>
+                            <li><a href="blog.html" data-overtext="Блог">Блог</a></li>
+                            <li><a href="jobs.html" data-overtext="Вакансии">Вакансии</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__menu is--contacts">
+                        <div class="footer__menu__title">Контакты</div>
+                        <ul>
+                            <li><span>г. Орел, ул. Бульвар Победы, д. 6, 4 этаж, офис 52</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__right">
+                <div class="footer__socials">
+                    <div class="footer__menu__title">Мы в жизни</div>
+                    <div class="footer__socials__list">
+                        <ul class="social is--blue is--right">
+                            <li><a href="#"><svg class="svg-behance-dims svg is--behance">
+                                        <use xlink:href="img/svg/sprites.svg#behance"></use>
+                                    </svg></a></li>
+                            <li><a href="#"><svg class="svg-vk-dims svg is--vk">
+                                        <use xlink:href="img/svg/sprites.svg#vk"></use>
+                                    </svg></a></li>
+                            <li><a href="#"><svg class="svg-facebook-dims svg is--facebook">
+                                        <use xlink:href="img/svg/sprites.svg#facebook"></use>
+                                    </svg></a></li>
+                            <li><a href="#"><svg class="svg-twitter-dims svg is--twitter">
+                                        <use xlink:href="img/svg/sprites.svg#twitter"></use>
+                                    </svg></a></li>
+                            <li><a href="#"><svg class="svg-instagram-dims svg is--instagram">
+                                        <use xlink:href="img/svg/sprites.svg#instagram"></use>
+                                    </svg></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__cop">© 2019, Все права защищены </div>
+            </div>
+        </div>
+    </footer>
+    <div class="geometry">
+        <div class="geometry__circle"></div>
+        <div class="geometry__line is--left"></div>
+        <div class="geometry__line is--center"></div>
+        <div class="geometry__line is--right"></div>
+    </div>
+    <div id="preloader" class="preloader">
+        <div class="preloader__logo">
+
+        </div>
+    </div>
+    <script src="dist/js/jquery-3.3.1.min.js"></script>
+    <script src="dist/js/jquery.visible.min.js"></script>
+    <script src="dist/js/spyeye.js"></script>
+    <script src="dist/js/prefixfree.dynamic-dom.min.js"></script>
+    <script src="dist/js/anime.min.js"></script>
+    <script src="dist/js/jquery.fancybox.min.js"></script>
+    <script src="dist/js/tilt.jquery.min.js"></script>
+    <script src="dist/js/svg4everybody.min.js"></script>
+    <script src="dist/js/slick.min.js"></script>
+    <script src="dist/js/main.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANLxdBSU8fJGR5IzCxzgTbVTdgOsJXcq4&callback=initMap"></script>
+    <script>
+        svg4everybody();
+    </script>
+</body>
+
+</html>

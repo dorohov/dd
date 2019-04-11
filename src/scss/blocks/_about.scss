@@ -1,0 +1,123 @@
+.about {
+    &__video {
+        min-height: 100vh;
+        overflow: hidden;
+        position: relative;
+        video {
+            min-width: 100%; 
+            min-height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+    }
+    &__info {
+        background: $grey_bg;
+        overflow: hidden;
+        &__inner {
+            @extend .container-xl;
+            overflow: hidden;
+            .heading {
+                margin-bottom: 30px;
+            }
+        }
+        &__content {
+            margin-bottom: 100px;
+            &__block {
+                max-width: 660px;
+                color: $text;
+                font-size: 18px;
+                line-height: 23px;
+            }
+        }
+        &__footer {
+            display: flex;
+            margin: 0 -15px;
+            justify-content: space-between;
+            &__block {
+                max-width: 430px;
+                width: 100%;
+                padding: 0 15px;
+                &__inner {
+                    display: flex;
+                }
+                &__num {
+                    color: $blue;
+                    font-family: 'Intro';
+                    font-weight: 900;
+                    font-size: 55px;
+                    line-height: 53px;
+                    span {
+                        transform: rotate(-90deg);
+                        display: block;
+                    }
+                }
+                &__text {
+                    color: $text;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $resp1025) {
+    .about {
+        &__info {
+            &__footer {
+                &__block {
+                    &__inner {
+                        flex-wrap: wrap;
+                    }
+                    &__num {
+                        span {
+                            transform: none;
+                            margin-bottom: -30px;
+                            opacity: .2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $resp768) {
+    .about {
+        &__info {
+            &__content {
+                margin-bottom: 40px;
+                &__block {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+            &__footer {
+                flex-wrap: wrap;
+                margin: 0;
+                &__block {
+                    max-width: 100%;
+                    padding: 0;
+                    margin-bottom: 30px;
+                    &__inner {
+                        flex-wrap: nowrap;
+                        align-items: center;
+                    }
+                    &__num {
+                        span {
+                            transform: rotate(-90deg);
+                            margin: 0;
+                            opacity: 1;
+                        }
+                    }
+                    &__text {
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

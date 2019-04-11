@@ -1,0 +1,19 @@
+<div class="services-accordion slide is--bg_@@bg">
+    <div class="services-accordion__inner bgtext" data-bgtext="@@bg_text">
+        <div class="heading is--black">@@title</div>
+        <div class="services-accordion__wrap">
+            <ul>
+                @@for(var i = 0; i < items.length; i++) {
+                    <li>
+                        <div class="services-accordion__block">
+                            <div class="accordion__block__title">`+items[i].title+`</div>
+                            <div class="accordion__block__content">
+                                @@include('accordion_items/`+items[i].template+`')
+                            </div>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

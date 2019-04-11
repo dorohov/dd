@@ -1,0 +1,12 @@
+<div class="about__video">
+    <video preload="metadata" autoplay="autoplay" loop="loop">
+        <source src="video/about.mp4">
+    </video>
+</div>
+@@include('about.info.html')
+@@include('about.team.html')
+@@include('../blocks/blocks.clients.main.html')
+@@include('../blocks/blocks.form.main.html', {
+    "title": "Получить бесплатный <br> анализ сайта",
+    "resume": "false"
+})

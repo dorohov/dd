@@ -260,7 +260,7 @@ $services_text_color: #1C1E2B;
                 }
                 &.is--adv {
                     svg {
-                        transform: translateY(-70px);
+                        transform: translateY(-100px) translateX(-200px);
                     }
                 }
                 &.is--style {
@@ -275,7 +275,7 @@ $services_text_color: #1C1E2B;
                 }
                 &.is--marketing {
                     svg {
-                        transform: translateY(-100px) translateX(-200px);
+                        transform: translateY(-70px);
                     }
                 }
             }
@@ -496,6 +496,12 @@ $services_text_color: #1C1E2B;
             }
         }
     }
+    &-accordion {
+        overflow: hidden;
+        &__inner {
+            @extend .container-xl;
+        }
+    }
 }
 
 @keyframes faIll {
@@ -635,6 +641,9 @@ $services_text_color: #1C1E2B;
 @media (max-width: 1440px) {
     .servicescur {
         &__top {
+            &__wrap {
+                align-items: center;
+            }
             &__menu {
                 margin-right: 60px;
             }
@@ -684,13 +693,13 @@ $services_text_color: #1C1E2B;
                 &.is--adv {
                     svg {
                         width: 150%;
-                        transform: translateX(-200px) translateY(-50px);
+                        transform: translateX(-320px) translateY(-150px);
                     }
                 }
                 &.is--marketing {
                     svg {
                         width: 150%;
-                        transform: translateX(-320px) translateY(-150px);
+                        transform: translateX(-200px) translateY(-50px);
                     }
                 }
                 &.is--smm {
@@ -741,13 +750,13 @@ $services_text_color: #1C1E2B;
                 &.is--adv {
                     svg {
                         width: 120%;
-                        transform: translateX(-120px) translateY(-110px);
+                        transform: translateX(-160px) translateY(-150px);
                     }
                 }
                 &.is--marketing {
                     svg {
                         width: 120%;
-                        transform: translateX(-160px) translateY(-150px);
+                        transform: translateX(-120px) translateY(-110px);
                     }
                 }
                 &.is--smm {
