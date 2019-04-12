@@ -95,7 +95,7 @@
             letter-spacing: 0.14em;
             text-transform: uppercase;
             cursor: pointer;
-            color: rgba(255, 255, 255, 0.5);
+            color: #fff;
             border: none;
             outline: none;
             padding: 0;
@@ -104,12 +104,17 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            opacity: .5;
+            transition: .5s all ease;
+            &:hover {
+                opacity: 1;
+            }
             span {
                 width: 100%;
                 margin-bottom: 5px;
             }
             svg {
-                fill: rgba(255, 255, 255, 0.5);
+                fill: #fff
             }
         }
     }

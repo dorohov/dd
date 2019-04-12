@@ -235,6 +235,18 @@
             img {
                 max-width: 100%;
                 width: 100%;
+                transition: .5s all ease;
+            }
+            a[data-fancybox] {
+                cursor: e-resize;
+                display: block;
+                cursor: url(../../img/fancybox_cursor.png), auto;
+                // background: #1A152C;
+                &:hover {
+                    img {
+                        opacity: .3;
+                    }
+                }
             }
         }
         &__socials {

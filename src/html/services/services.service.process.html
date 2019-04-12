@@ -3,7 +3,7 @@
         <div class="heading is--black">@@title</div>
         <div class="services-process__wrap">
             @@for(var i = 0; i < items.length; i++) {
-                <div class="services-process__block is--`+items[i].align+`">
+                <div class="services-process__block is--`+items[i].align+` __anim" data-animtype="`+items[i].animation+`" data-animtransition=".5" data-animdelay="`+items[i].animation_delay+`">
                     <div class="services-process__block__inner">
                         <div class="services-process__block__circle">
                             <span class="is--`+items[i].color+`">`+items[i].id+`</span>

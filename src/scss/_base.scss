@@ -39,10 +39,6 @@ ul {
     list-style: none;
 }
 
-// #svgDavid path {
-//     transition: 1s all ease;
-// }
-
 svg {
     overflow: visible;
     width: 100%;
@@ -51,4 +47,11 @@ svg {
 svg,
 img {
     vertical-align: middle;
+}
+
+.__anim {
+    opacity: 0;
+    &.is--show {
+        opacity: 1;
+    }
 }

@@ -324,7 +324,9 @@ $services_text_color: #1C1E2B;
                     &__block {
                         &__icon {
                             img {
-                                transform: rotateY(180deg);
+                                -webkit-filter: invert(1);
+                                filter: invert(1);
+                                transform: rotate(10deg) scale(1.1);
                             }
                         }
                     }
@@ -498,8 +500,113 @@ $services_text_color: #1C1E2B;
     }
     &-accordion {
         overflow: hidden;
+        &.is--bg_dark {
+            background: #0A1032;
+            .heading {
+                color: #fff;
+            }
+            .services-accordion__block {
+                &.is--open {
+                    background: rgba(#fff, .1);
+                }
+                &__title,
+                &__content p {
+                    color: #fff;
+                }
+                &__title {
+                    &__ico {
+                        span {
+                            background: #fff !important;
+                            &::before,
+                            &::after {
+                                background: linear-gradient(180deg, #1A1535 0%, #140F4F 100%), #7229FF;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .heading {
+            margin-bottom: 30px;
+        }
         &__inner {
             @extend .container-xl;
+        }
+        &__wrap {
+            max-width: 1200px;
+            width: 100%;
+        }
+        &__block {
+            margin-bottom: 10px;
+            transition: .25s all ease;
+            &__title {
+                color: $text;
+                font-family: 'Intro';
+                font-weight: 900;
+                font-size: 36px;
+                line-height: 35px;
+                cursor: pointer;
+                padding: 40px 50px 40px 100px;
+                position: relative;
+                user-select: none;
+                &__ico {
+                    position: absolute;
+                    top: 40px;
+                    left: 30px;
+                    span {
+                        width: 38px;
+                        height: 38px;
+                        background: linear-gradient(180deg, #1A1535 0%, #140F4F 100%), #7229FF;
+                        display: block;
+                        border-radius: 100%;
+                        position: relative;
+                        transition: .25s all ease;
+                        &::after,
+                        &::before {
+                            width: 17px;
+                            height: 2px;
+                            background: #fff;
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            top: 50%;
+                            margin-top: -1px;
+                            border-radius: 2px;
+                            transition: .25s all ease;
+                        }
+                        &::before {
+                            transform: translateX(-50%) rotate(90deg);
+                        }
+                    }
+                }
+            }
+            &__content {
+                padding: 0px 50px 40px 100px;
+                p {
+                    margin: 0 0 20px 0;
+                    color: $text;
+                    font-size: 16px;
+                    line-height: 18px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            &.is--open {
+                background: #EEEFF8;
+                .services-accordion__block__title {
+                    &__ico {
+                        span {
+                            background: #B5B9D6;
+                            &::before {
+                                transform: translateX(-50%) rotate(0deg);
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -631,6 +738,34 @@ $services_text_color: #1C1E2B;
                         width: 60px;
                         height: 60px;
                         font-size: 26px;
+                    }
+                }
+            }
+        }
+        &-accordion {
+            &__block {
+                &__title {
+                    font-size: 20px;
+                    line-height: 24px;
+                    padding: 20px 20px 20px 50px;
+                    &__ico {
+                        top: 20px;
+                        left: 10px;
+                        span {
+                            width: 28px;
+                            height: 28px;
+                            &::before,
+                            &::after {
+                                width: 12px;
+                            }
+                        }
+                    }
+                }
+                &__content {
+                    padding: 0 20px 20px 50px;
+                    p {
+                        font-size: 14px;
+                        line-height: 16px;
                     }
                 }
             }

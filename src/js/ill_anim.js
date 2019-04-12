@@ -94,7 +94,13 @@
         }, function() {
             clearTimeout(jobsTimer)
             $('.jobsImageHidden').removeClass('jobsImageHidden-visible')
-        }) 
+        })
+        
+        $('.banner__down button').on('click', function() {
+            $('html, body').animate({
+                scrollTop: $('.banner').innerHeight()
+            }, 1000, "swing");
+        })
 
     })
 })(jQuery);

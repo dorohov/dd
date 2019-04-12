@@ -25,6 +25,24 @@
         }
     }
     &__group {
+        &.is--error {
+            &.is--text {
+                label {
+                    span {
+                        margin-left: 10px;
+                        &.is--error {
+                            color: #ef5350;
+                        }
+                    }
+                }
+                span.is--border {
+                    &::after {
+                        background: #ef5350;
+                        width: 100%;
+                    }
+                }
+            }
+        }
         &.is--text {
             position: relative;
             margin-bottom: 50px;
@@ -36,6 +54,7 @@
                 top: 50%;
                 transform: translateY(-50%);
                 transition: .25s all ease;
+                cursor: text;
             }
             span.is--border {
                 &::after {

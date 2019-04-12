@@ -61,6 +61,7 @@
                     margin-bottom: 5px;
                     transition: .2s all ease;
                     position: relative;
+                    white-space: nowrap;
                     &::after {
                         content: attr(data-overtext);
                         position: absolute;

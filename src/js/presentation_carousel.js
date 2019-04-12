@@ -7,5 +7,9 @@
             nextArrow: '.presentation__carousel__arrow.is--next'
         });
 
+        $('.presentation').css({
+            "padding-top": $('.navbar').innerHeight()
+        })
+
     })
 })(jQuery);
