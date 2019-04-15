@@ -12,13 +12,13 @@
     <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#200e53">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <title>Сайт для компании Aegospotami — DorohovDesign</title>
+    <title>Полиграфия и наружная реклама для фитнес-клуба — DorohovDesign</title>
     <link rel="stylesheet" href="dist/css/jquery.fancybox.css">
     <link rel="stylesheet" href="dist/css/style.css">
 </head>
 
 <body>
-    <script src="dist/js/loader.js"></script>
+    <script src="dist/js/loader.js" data-type="full" id="preloaderScript"></script>
     <header class="navbar is--dark is--color--white">
         <div class="navbar__inner">
             <div class="navbar__logo">
@@ -148,6 +148,16 @@
                         <use xlink:href="img/svg/sprites.svg#share"></use>
                     </svg>
                 </a>
+            </div>
+            <div class="presentation__desc slide">
+                <div class="presentation__desc__inner bgtext" data-bgtext="project">
+                    <h1>Полиграфия и наружная реклама для фитнес клуба</h1>
+                    <p>В студии была разработана серия концептуальной наружной рекламы для фитнес-клуба «Fitness Energy» (г. Орел).</p>
+                    <p>Впервые в городе была применена совместная реклама заказчика и автора в таком формате.</p>
+                    <p>Создать целостную картинку и подчеркнуть общую концепцию удалось с помощью соответствующих тематических иллюстраций. Продолжением фирменной стилистической поддержки клуба стала разработка рекламной полиграфии.
+                    </p>
+                    <p>Нашей студией были придуманы и воплощены в жизнь рекламные буклеты формата А4 и коммерческое предложение. Созданные печатные материалы объединены единой идеей и выполнены в фирменном стиле клуба. Результат работы получился ярким, информативным и цепляющим. То, что нужно, чтобы привлечь потенциальных клиентов клуба.</p>
+                </div>
             </div>
             <div class="form slide">
                 <div class="form__inner bgtext" data-bgtext="contacts">
@@ -294,8 +304,8 @@
         <div class="geometry__line is--center"></div>
         <div class="geometry__line is--right"></div>
     </div>
-    <div id="preloader" class="preloader">
-        <div class="preloader__logo">
+    <div class="preloader" id="preloader">
+        <div id="preloader" class="preloader__logo">
 
         </div>
     </div>
@@ -309,6 +319,7 @@
     <script src="dist/js/svg4everybody.min.js"></script>
     <script src="dist/js/slick.min.js"></script>
     <script src="dist/js/validator.min.js"></script>
+    <script src="dist/js/vivus.min.js"></script>
     <script src="dist/js/main.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANLxdBSU8fJGR5IzCxzgTbVTdgOsJXcq4&callback=initMap"></script>
     <script>

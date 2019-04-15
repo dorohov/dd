@@ -26,11 +26,33 @@
                     &__block {
                         &__img {
                             img {
-                                opacity: .4;
+                                opacity: .7;
+                            }
+                            &::after {
+                                left: 0;
+                                width: 100%;
+                                right: auto;
                             }
                         }
                     }
                 }
+            }
+        }
+        &.is--hover {
+            &_blue {
+                .portfolio__block__img::after{background: $blue}
+            }
+            &_dblue {
+                .portfolio__block__img::after{background: $dblue}
+            }
+            &_purple {
+                .portfolio__block__img::after{background: $purple}
+            }
+            &_green {
+                .portfolio__block__img::after{background: $green}
+            }
+            &_pink {
+                .portfolio__block__img::after{background: $pink}
             }
         }
         &.is--right,
@@ -40,11 +62,24 @@
         &__img {
             margin-bottom: 20px;
             overflow: hidden;
+            position: relative;
+            &::after {
+                width: 0%;
+                height: 7px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                left: auto;
+                content: '';
+                display: block;
+                transition: .25s all ease-in-out;
+                background: $blue;
+            }
             img {
                 width: 100%;
                 height: auto;
                 cursor: url(../../img/fancybox_cursor.png), auto;
-                transition: .5s all ease;
+                transition: 1s all ease;
             }
         }
         &__title {
@@ -154,11 +189,51 @@
             }
         }
     }
+    &__desc {
+        overflow: hidden;
+        &__inner {
+            @extend .container-xl;
+            max-width: 1120px;
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                color: $text;
+                margin: 0 0 40px 0;
+                font-family: 'Intro';
+                font-weight: 900;
+            }
+            h1 {
+                font-size: 80px;
+                line-height: 78px;
+                margin-bottom: 70px;
+            }
+            p {
+                margin: 0 0 20px 0;
+                line-height: 23px;
+                font-size: 18px;
+                color: $text;
+            }
+        }
+    }
 }
 
 @media (max-width: $resp1200) {
     .presentation {
         padding-top: 80px;
+        &__desc {
+            h1 {
+                font-size: 40px;
+                line-height: 40px;
+                margin-bottom: 30px;
+            }
+            p {
+                font-size: 16px;
+                line-height: 18px;
+            }
+        }
     }
 }
 
@@ -211,6 +286,12 @@
                     width: 20px;
                     height: 20px;
                 }
+            }
+        }
+        &__desc {
+            h1 {
+                font-size: 24px;
+                line-height: 26px;
             }
         }
     }

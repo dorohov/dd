@@ -31,6 +31,9 @@
     font-weight: 900;
     color: $mainColor;
     position: relative;
+    @if($fontsite == 36px) {
+        line-height: 50px;
+    }
     &::after {
         content: attr(data-txt);
         position: absolute;
@@ -81,36 +84,36 @@
         background-image: url(../../img/bg_frame1.jpg);
         background-size: cover;
         background-position: center;
-        background-color: #230A46;
+        background-color: #180E2F;
     }
     20% {
         background-image: url(../../img/bg_frame2.jpg);
         background-size: cover;
         background-position: center;
-        background-color: #230A46;
+        background-color: #180E2F;
     }
     40% {
         background-image: url(../../img/bg_frame3.jpg);
         background-size: cover;
         background-position: center;
-        background-color: #230A46;
+        background-color: #180E2F;
     }
     60% {
         background-image: url(../../img/bg_frame4.jpg);
         background-size: cover;
         background-position: center;
-        background-color: #230A46;
+        background-color: #180E2F;
     }
     80% {
         background-image: url(../../img/bg_frame5.jpg);
         background-size: cover;
         background-position: center;
-        background-color: #230A46;
+        background-color: #180E2F;
     }
     100% {
         background-image: url(../../img/bg_frame1.jpg);
         background-size: cover;
         background-position: center;
-        background-color: #230A46;
+        background-color: #180E2F;
     }
 }

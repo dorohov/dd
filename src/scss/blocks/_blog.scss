@@ -1,4 +1,5 @@
 .blog {
+    overflow: hidden;
     &__inner {
         @extend .container-xl;
         .heading {
@@ -45,15 +46,29 @@
         margin-bottom: 70px;
         transition: 1s all ease;
         overflow: hidden;
+        &.is--hover {
+            &_blue {
+                .blog__block__img::after{background: $blue}
+            }
+            &_dblue {
+                .blog__block__img::after{background: $dblue}
+            }
+            &_purple {
+                .blog__block__img::after{background: $purple}
+            }
+            &_green {
+                .blog__block__img::after{background: $green}
+            }
+            &_pink {
+                .blog__block__img::after{background: $pink}
+            }
+        }
         &:hover {
-            .blog {
-                &__block {
-                    &__img {
-                        transform: translateZ(10px) perspective(3000px) rotateY(15deg);
-                        img {
-                            transform: scale(1.05);
-                        }
-                    }
+            .blog__block__img {
+                &::after {
+                    left: 0;
+                    width: 100%;
+                    right: auto;
                 }
             }
         }
@@ -63,10 +78,19 @@
         &__img {
             margin-bottom: 35px;
             overflow: hidden;
-            transition: 1s all ease;
-            transform: translateZ(10px) perspective(3000px) rotateY(0);
-            transform-property: transform,z-index;
-            transform-origin: 0 50%;
+            position: relative;
+            &::after {
+                width: 0%;
+                height: 10px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                left: auto;
+                content: '';
+                display: block;
+                transition: .25s all ease-in-out;
+                background: $blue;
+            }
             img {
                 max-width: 100%;
                 width: 100%;

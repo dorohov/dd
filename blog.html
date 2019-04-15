@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <script src="dist/js/loader.js"></script>
+    <script src="dist/js/loader.js" data-type="min" id="preloaderScript"></script>
     <header class="navbar is--transparent is--color--dark">
         <div class="navbar__inner">
             <div class="navbar__logo">
@@ -124,7 +124,7 @@
                     </nav>
                     <div class="blog__list">
                         <div class="blog__list__inner">
-                            <div class="blog__block is--left visblock">
+                            <div class="blog__block is--left visblock is--l-hov">
                                 <a href="article.html" class="blog__block__inner">
                                     <div class="blog__block__img">
                                         <img class="lazy" data-src="img/blog1.jpg" alt="Техническая поддержка" src="img/blog_placeholder.jpg">
@@ -140,7 +140,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="blog__block is--right visblock">
+                            <div class="blog__block is--right visblock is--l-hov">
                                 <a href="article.html" class="blog__block__inner">
                                     <div class="blog__block__img">
                                         <img class="lazy" data-src="img/blog2.jpg" alt="Тренды в типографике" src="img/blog_placeholder.jpg">
@@ -156,7 +156,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="blog__block is--left visblock">
+                            <div class="blog__block is--left visblock is--l-hov">
                                 <a href="article.html" class="blog__block__inner">
                                     <div class="blog__block__img">
                                         <img class="lazy" data-src="img/blog3.jpg" alt="Почему рекламодатели уходят в SMM" src="img/blog_placeholder.jpg">
@@ -172,7 +172,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="blog__block is--right visblock">
+                            <div class="blog__block is--right visblock is--l-hov">
                                 <a href="article.html" class="blog__block__inner">
                                     <div class="blog__block__img">
                                         <img class="lazy" data-src="img/blog4.jpg" alt="Продвижение сайтов" src="img/blog_placeholder.jpg">
@@ -188,7 +188,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="blog__block is--left visblock">
+                            <div class="blog__block is--left visblock is--l-hov">
                                 <a href="article.html" class="blog__block__inner">
                                     <div class="blog__block__img">
                                         <img class="lazy" data-src="img/blog5.jpg" alt="Как убить имидж в социальных сетях" src="img/blog_placeholder.jpg">
@@ -204,7 +204,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="blog__block is--right visblock">
+                            <div class="blog__block is--right visblock is--l-hov">
                                 <a href="article.html" class="blog__block__inner">
                                     <div class="blog__block__img">
                                         <img class="lazy" data-src="img/blog6.jpg" alt="Веб аналитика как начальный этап разработки сайта" src="img/blog_placeholder.jpg">
@@ -312,8 +312,8 @@
         <div class="geometry__line is--center"></div>
         <div class="geometry__line is--right"></div>
     </div>
-    <div id="preloader" class="preloader">
-        <div class="preloader__logo">
+    <div class="preloader" id="preloader">
+        <div id="preloader" class="preloader__logo">
 
         </div>
     </div>
@@ -327,6 +327,7 @@
     <script src="dist/js/svg4everybody.min.js"></script>
     <script src="dist/js/slick.min.js"></script>
     <script src="dist/js/validator.min.js"></script>
+    <script src="dist/js/vivus.min.js"></script>
     <script src="dist/js/main.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANLxdBSU8fJGR5IzCxzgTbVTdgOsJXcq4&callback=initMap"></script>
     <script>

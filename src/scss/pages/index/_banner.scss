@@ -209,3 +209,11 @@
         }
     }
 }
+
+@media (max-height: 768px) {
+    .banner {
+        &__content {
+            padding-top: 0;
+        }
+    }
+}

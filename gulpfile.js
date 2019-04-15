@@ -67,6 +67,7 @@ function svgMap() {
                     $('[fill]').removeAttr('fill');
                     $('[stroke]').removeAttr('stroke');
                     $('[style]').removeAttr('style');
+                    $('[clip-path]').removeAttr('clip-path');
                 },
                 parserOptions: {xmlMode: true}
             }))

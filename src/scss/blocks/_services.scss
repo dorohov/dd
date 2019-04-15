@@ -324,9 +324,7 @@ $services_text_color: #1C1E2B;
                     &__block {
                         &__icon {
                             img {
-                                -webkit-filter: invert(1);
-                                filter: invert(1);
-                                transform: rotate(10deg) scale(1.1);
+                                // transform: rotate(10deg) scale(1.1);
                             }
                         }
                     }
@@ -347,6 +345,7 @@ $services_text_color: #1C1E2B;
                 font-size: 18px;
                 color: $text;
                 line-height: 20px;
+                margin: 0 auto;
             }
         }
     }

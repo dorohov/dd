@@ -3,13 +3,18 @@ body {
     font-weight: normal;
     line-height: normal;
     position: relative;
-    // opacity: 0;
-    transition: .5s all ease;
+    opacity: 0;
+    // transition: .5s all ease;
     &.is--mobmenu {
         overflow: hidden;
     }
     &.is--loaded {
         opacity: 1;
+    }
+    &.is--preloader {
+        .preloader {
+            display: block;
+        }
     }
 }
 
