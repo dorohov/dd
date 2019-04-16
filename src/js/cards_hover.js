@@ -9,7 +9,6 @@
         var colors = [
             'blue',
             'dblue',
-            'green',
             'purple',
             'pink'
         ]

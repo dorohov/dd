@@ -19,40 +19,43 @@
         overflow: hidden;
         max-width: 33.3333333%;
         width: 100%;
-        &__inner {
-            display: block;
-            &:hover {
-                .portfolio {
-                    &__block {
-                        &__img {
-                            img {
-                                opacity: .7;
-                            }
-                            &::after {
-                                left: 0;
-                                width: 100%;
-                                right: auto;
-                            }
+        &:hover {
+            .portfolio {
+                &__block {
+                    &__img {
+                        &::after {
+                            left: 0;
+                            width: 100%;
+                            right: auto;
+                        }
+                    }
+                    &__title {
+                        span {
+                            background-size: .9em .9em;
                         }
                     }
                 }
             }
         }
+        &__inner {
+            display: block;
+        }
         &.is--hover {
             &_blue {
                 .portfolio__block__img::after{background: $blue}
+                .portfolio__block__title span{background-image: linear-gradient($blue 0,$blue 100%);color:#fff;};
             }
             &_dblue {
                 .portfolio__block__img::after{background: $dblue}
+                .portfolio__block__title span{background-image: linear-gradient($dblue 0,$dblue 100%);color:#fff;};
             }
             &_purple {
                 .portfolio__block__img::after{background: $purple}
-            }
-            &_green {
-                .portfolio__block__img::after{background: $green}
+                .portfolio__block__title span{background-image: linear-gradient($purple 0,$purple 100%);color:#fff;};
             }
             &_pink {
                 .portfolio__block__img::after{background: $pink}
+                .portfolio__block__title span{background-image: linear-gradient($pink 0,$pink 100%);color:#fff};
             }
         }
         &.is--right,
@@ -85,11 +88,15 @@
         &__title {
             span {
                 font-size: 20px;
-                line-height: 23px;
+                line-height: 26px;
                 color: $text;
                 font-weight: 700;
                 font-family: 'Intro';
                 position: relative;
+                transition: .25s ease;
+                background-repeat: repeat-x;
+                background-position: 0 65%;
+                background-size: 0 0;
                 &::after {
                     content: url(../../img/svg/share.svg);
                     padding-left: 10px;

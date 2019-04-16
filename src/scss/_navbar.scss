@@ -22,7 +22,9 @@ $navbarbg: #040F29;
         transform: translateY(-150px);
     }
     &.is--dark {
-        background: $navbarbg;
+        &::after {
+            transform: none !important;
+        }
     }
     &.is--hide {
         transform: translateY(-100%);
@@ -250,13 +252,16 @@ $navbarbg: #040F29;
     }
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1500px) {
     .navbar {
         &__menu {
             ul {
                 li {
                     padding-left: 10px;
                     padding-right: 10px;
+                    a {
+                        font-size: 12px;
+                    }
                 }
             }
         }

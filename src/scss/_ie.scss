@@ -1,6 +1,6 @@
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-     .servicescur__top__ill svg {
-         width: unset !important;
-         height: unset !important;
+     .servicescur__top__ill {
+         height: 100%;
+         padding-top: 30vh;
      }   
 }

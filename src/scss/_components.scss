@@ -71,4 +71,18 @@
             }
         }
     }
+    &.is--blue-dark {
+        li {
+            a {
+                svg {
+                    fill: $blue;
+                }
+                &:hover {
+                    svg {
+                        fill: #000;
+                    }
+                }
+            }
+        }
+    }
 }

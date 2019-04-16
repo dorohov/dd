@@ -5,10 +5,10 @@
         margin: 0 auto;
         z-index: 100;
         position: relative;
-        padding: 0 30px;
+        padding: 0 60px;
     }
     &-xl {
-        max-width: 1580px;
+        max-width: 1610px;
     }
     &-md {
         max-width: 1320px;
@@ -114,6 +114,11 @@
 }
 
 @media (max-width: 1440px) {
+    .heading {
+        font-size: 50px;
+        line-height: 48px;
+        margin-bottom: 40px;
+    }
     .bgtext {
         &--service {
             &::after {
@@ -121,6 +126,10 @@
                 font-size: 140px;
             }
         }
+    }
+    .slide {
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 }
 
@@ -180,5 +189,11 @@
         &::after {
             content: none;
         }
+    }
+}
+
+@media (max-height: 940px) {
+    .page {
+        padding-top: 90px;
     }
 }

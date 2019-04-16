@@ -118,6 +118,27 @@
     }
 }
 
+@media (max-width: 1440px) {
+    .footer {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        &__info {
+            &__email,
+            &__phone {
+                width: 100%;
+                margin-bottom: 30px;
+                a {
+                    @include bgLink(20px, 4px, $blue, #fff);
+                    color: #fff;
+                }
+            }
+        }
+        &__menus {
+            padding-left: 50px;
+        }
+    }
+}
+
 @media (max-width: $resp1200) {
     .footer {
         &__inner {

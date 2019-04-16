@@ -212,6 +212,18 @@
     }
 }
 
+@media (max-width: 1440px) {
+    .form {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        &__group {
+            &.is--text {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
 @media (max-width: 1300px) {
     .form {
         &__left,
@@ -274,9 +286,7 @@
                 }
             }
             &__socials {
-                li {
-                    margin: 0 10px !important;
-                }
+                display: none;
             }
         }
     }

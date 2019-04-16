@@ -49,18 +49,19 @@
         &.is--hover {
             &_blue {
                 .blog__block__img::after{background: $blue}
+                .blog__block__title span{background-image: linear-gradient($blue 0,$blue 100%);color:#fff;};
             }
             &_dblue {
                 .blog__block__img::after{background: $dblue}
+                .blog__block__title span{background-image: linear-gradient($dblue 0,$dblue 100%);color:#fff;};
             }
             &_purple {
                 .blog__block__img::after{background: $purple}
-            }
-            &_green {
-                .blog__block__img::after{background: $green}
+                .blog__block__title span{background-image: linear-gradient($purple 0,$purple 100%);color:#fff;};
             }
             &_pink {
                 .blog__block__img::after{background: $pink}
+                .blog__block__title span{background-image: linear-gradient($pink 0,$pink 100%);color:#fff;};
             }
         }
         &:hover {
@@ -70,6 +71,9 @@
                     width: 100%;
                     right: auto;
                 }
+            }
+            .blog__block__title span {
+                background-size: .9em .9em;
             }
         }
         &.is--right {
@@ -99,12 +103,19 @@
             }
         }
         &__title {
-            font-weight: 900;
-            font-family: 'Intro';
-            font-size: 24px;
-            line-height: 23px;
             margin-bottom: 20px;     
-            color: $text;       
+            span {
+                transition: .25s ease;
+                background-repeat: repeat-x;
+                background-position: 0 65%;
+                background-size: 0 0;
+                line-height: 26px;
+                font-size: 24px;
+                font-family: 'Intro';
+                font-weight: 900;
+                position: relative;
+                color: $text;       
+            }
         }
         &__desc {
             margin-bottom: 20px;
@@ -117,6 +128,7 @@
         }
     }
     &__load {
+        margin: 0 0 0 -30px;
         button {
             border: none;
             display: flex;
@@ -181,7 +193,7 @@
                         line-height: 18px;
                         padding: 10px 15px;
                         background: #1B243A;
-                        border-radius: 3px;
+                        border-radius: 5px;
                         transition: .4s all ease;
                         margin-right: 10px;
                         display: block;
@@ -368,6 +380,7 @@
             }
         }
         &__load {
+            margin: 0 !important;
             button {
                 margin: 0 auto;
                 svg {
