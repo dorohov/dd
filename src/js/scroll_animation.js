@@ -3,8 +3,10 @@
     $(function() {
 
         startAnimation()
+        teamAnimation() 
         $(document).scroll(function() {
             startAnimation()
+            teamAnimation() 
         })
 
         function startAnimation() {
@@ -41,6 +43,14 @@
                         .removeClass(a_e_animation)
                 }
             })
+        }
+
+        function teamAnimation() {
+            if($('.about__team__content').visible( true )) {
+                $('.teamPic').addClass('is--animated')
+            }else {
+                $('.teamPic').removeClass('is--animated')
+            }
         }
 
     })

@@ -9,7 +9,7 @@
             var _this = $(this).attr('id')
             prof = $(this).attr('id')
             $('#teamHeading span').addClass('is--animate')
-
+            $('.about__team__inner').removeClass('bgtext')
             $('.about__team__content__cloud').addClass('is--active')
             $('#teamHeading span').html($(this).data('profname'))
             $('.about__team').addClass('is--' + prof)
@@ -24,6 +24,7 @@
             $('#teamHeading span').removeClass('is--animate')
             $('.teamPic').removeClass('is--unhover')
             $('#teamHeading span').html('Наша команда')
+            $('.about__team__inner').addClass('bgtext')
         })
 
     })
