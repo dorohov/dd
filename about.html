@@ -104,9 +104,12 @@
     </div>
     <main>
         <div class="about__video">
-            <video preload="metadata" autoplay="autoplay" loop="loop">
-                <source src="video/about.mp4">
+            <video preload="metadata" loop="loop" poster="img/bg-video.jpg" autoplay muted id="about_video">
+                <source src="video/about.mp4" type='video/mp4;'>
             </video>
+            <script>
+                document.getElementById('about_video').play();
+            </script>
         </div>
         <div class="about__info slide">
             <div class="about__info__inner bgtext" data-bgtext="company">
@@ -2851,61 +2854,61 @@
                     <div class="about__team__mobile__list">
                         <div class="about__team__mobile__block">
                             <div class="about__team__mobile__block__img">
-                                <img src="img/svg/team1.svg" alt="">
+                                <img class="lazy" data-src="img/svg/team1.svg" alt="">
                             </div>
                             <div class="about__team__mobile__block__text">Project - менеджер</div>
                         </div>
                         <div class="about__team__mobile__block">
                             <div class="about__team__mobile__block__img">
-                                <img src="img/svg/team2.svg" alt="">
+                                <img class="lazy" data-src="img/svg/team2.svg" alt="">
                             </div>
                             <div class="about__team__mobile__block__text">Маркетолог</div>
                         </div>
                         <div class="about__team__mobile__block">
                             <div class="about__team__mobile__block__img">
-                                <img src="img/svg/team3.svg" alt="">
+                                <img class="lazy" data-src="img/svg/team3.svg" alt="">
                             </div>
                             <div class="about__team__mobile__block__text">UX - специалист</div>
                         </div>
                         <div class="about__team__mobile__block">
                             <div class="about__team__mobile__block__img">
-                                <img src="img/svg/team4.svg" alt="">
+                                <img class="lazy" data-src="img/svg/team4.svg" alt="">
                             </div>
                             <div class="about__team__mobile__block__text">Web - дизайнер</div>
                         </div>
                         <div class="about__team__mobile__block">
                             <div class="about__team__mobile__block__img">
-                                <img src="img/svg/team5.svg" alt="">
+                                <img class="lazy" data-src="img/svg/team5.svg" alt="">
                             </div>
                             <div class="about__team__mobile__block__text">FrontEnd - разработчик</div>
                         </div>
                         <div class="about__team__mobile__block">
                             <div class="about__team__mobile__block__img">
-                                <img src="img/svg/team6.svg" alt="">
+                                <img class="lazy" data-src="img/svg/team6.svg" alt="">
                             </div>
                             <div class="about__team__mobile__block__text">BackEnd - разработчик</div>
                         </div>
                         <div class="about__team__mobile__block">
                             <div class="about__team__mobile__block__img">
-                                <img src="img/svg/team7.svg" alt="">
+                                <img class="lazy" data-src="img/svg/team7.svg" alt="">
                             </div>
                             <div class="about__team__mobile__block__text">SMM - специалист</div>
                         </div>
                         <div class="about__team__mobile__block">
                             <div class="about__team__mobile__block__img">
-                                <img src="img/svg/team8.svg" alt="">
+                                <img class="lazy" data-src="img/svg/team8.svg" alt="">
                             </div>
                             <div class="about__team__mobile__block__text">Контент - менеджер</div>
                         </div>
                         <div class="about__team__mobile__block">
                             <div class="about__team__mobile__block__img">
-                                <img src="img/svg/team9.svg" alt="">
+                                <img class="lazy" data-src="img/svg/team9.svg" alt="">
                             </div>
                             <div class="about__team__mobile__block__text">Тестировщик</div>
                         </div>
                         <div class="about__team__mobile__block">
                             <div class="about__team__mobile__block__img">
-                                <img src="img/svg/team10.svg" alt="">
+                                <img class="lazy" data-src="img/svg/team10.svg" alt="">
                             </div>
                             <div class="about__team__mobile__block__text">SEO - специалист</div>
                         </div>
@@ -3115,17 +3118,7 @@
         </div>
     </div>
     <script src="dist/js/jquery-3.3.1.min.js"></script>
-    <script src="dist/js/jquery.visible.min.js"></script>
-    <script src="dist/js/spyeye.js"></script>
-    <script src="dist/js/prefixfree.dynamic-dom.min.js"></script>
-    <script src="dist/js/anime.min.js"></script>
-    <script src="dist/js/jquery.fancybox.min.js"></script>
-    <script src="dist/js/tilt.jquery.min.js"></script>
-    <script src="dist/js/svg4everybody.min.js"></script>
-    <script src="dist/js/slick.min.js"></script>
-    <script src="dist/js/validator.min.js"></script>
-    <script src="dist/js/vivus.min.js"></script>
-    <script src="dist/js/main.js"></script>
+    <script src="dist/js/bundle-min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANLxdBSU8fJGR5IzCxzgTbVTdgOsJXcq4&callback=initMap"></script>
     <script>
         svg4everybody();

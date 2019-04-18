@@ -196,6 +196,11 @@
 
 @media (max-width: $resp768) {
     .about {
+        &__video {
+            video {
+                left: -70%;
+            }
+        }
         &__info {
             &__content {
                 margin-bottom: 40px;

@@ -6,9 +6,11 @@ $services_text_color: #1C1E2B;
         overflow: hidden;
     }
     &__wrap {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 -28px;
+        &__inner {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
     }
     &__block {
         max-width: 25%;

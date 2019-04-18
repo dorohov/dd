@@ -1,7 +1,8 @@
 <div class="about__video">
-    <video preload="metadata" autoplay="autoplay" loop="loop">
-        <source src="video/about.mp4">
+    <video preload="metadata" loop="loop" poster="img/bg-video.jpg" autoplay muted id="about_video">
+        <source src="video/about.mp4" type='video/mp4;'>
     </video>
+    <script>document.getElementById('about_video').play();</script>
 </div>
 @@include('about.info.html')
 @@include('about.team.html')

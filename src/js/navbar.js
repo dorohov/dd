@@ -52,7 +52,7 @@
                 anime({
                     targets: '.__mobLink',
                     translateY: 45, // -> '250px'
-                    delay: anime.stagger(150),
+                    delay: anime.stagger(80),
                     complete: function(anim) {
                         anime({
                             targets: '.mobile__container',
