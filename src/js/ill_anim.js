@@ -105,5 +105,13 @@
             }, 1000, "swing");
         })
 
+        $(document).on('click', 'a._anchor[href^="#"]', function (event) {
+            event.preventDefault();
+        
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 1500);
+        });
+
     })
 })(jQuery);
