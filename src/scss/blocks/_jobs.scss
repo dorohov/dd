@@ -140,6 +140,9 @@
 @media (max-width: $resp768) {
     .jobs {
         &__top {
+            .heading {
+                margin-bottom: 50px;
+            }
             &__list {
                 &__container {
                     margin: 0 -15px !important;
