@@ -88,12 +88,12 @@
 
         $('.jobsImageTarget').hover(function() {
             clearTimeout(jobsTimer)
-            jobsTimer = setTimeout(function() {
-                $('.jobsImageHidden').addClass('jobsImageHidden-visible')
-            }, 1000)
+            $('.jobsImageHidden').addClass('jobsImageHidden-visible')
+            $('.jobsImageLabel').removeClass('is--active')
         }, function() {
             clearTimeout(jobsTimer)
             $('.jobsImageHidden').removeClass('jobsImageHidden-visible')
+            $('.jobsImageLabel').addClass('is--active')
         })
         
         $('.banner__down button').on('click', function() {

@@ -99,7 +99,9 @@
                 background-size: 0 0;
                 &::after {
                     content: url(../../img/svg/share.svg);
-                    padding-left: 10px;
+                    position: absolute;
+                    right: -25px;
+                    bottom: -4px;
                 }
             }
         }

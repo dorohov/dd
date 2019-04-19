@@ -214,7 +214,7 @@ $navbarbg: #040F29;
     flex-direction: column;
     &__menu {
         padding: 140px 0 0 0;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         width: 100%;
         ul {
             li {
@@ -224,7 +224,7 @@ $navbarbg: #040F29;
                     font-size: 18px;
                     color: #fff;
                     display: block;
-                    padding: 10px 20px;
+                    padding: 15px 20px;
                 }
             }
         }
@@ -244,7 +244,7 @@ $navbarbg: #040F29;
     }
     &__socials {
         margin-top: auto;
-        margin-bottom: 50px;
+        margin-bottom: 70px;
         overflow: hidden;
         span {
             display: block;

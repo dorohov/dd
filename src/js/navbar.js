@@ -2,6 +2,8 @@
     "use strict"
     $(function() {
 
+        var closeTimer
+
         anime({
             targets: '.mobile__container',
             translateX: '100vw', // -> '250px'
@@ -33,31 +35,36 @@
                           });
                     },
                     complete: function(anim) {
-                        anime({
-                            targets: '.__mobLink',
-                            translateY: 0, // -> '250px'
-                            // translateX: 0,
-                            delay: anime.stagger(150),
-                            complete: function(amim) {
-                                $('#mobileMenu').addClass('is--active')
-                                isOpen = !isOpen
-                                isClick = true
-                            }
-                        });
+                        
                     }
                 })
+                anime({
+                    targets: '.__mobLink',
+                    translateY: 0, // -> '250px'
+                    // translateX: 0,
+                    delay: anime.stagger(150),
+                    complete: function(amim) {
+                        $('#mobileMenu').addClass('is--active')
+                        isOpen = !isOpen
+                        isClick = true
+                    }
+                });
             }else if(isOpen && isClick) {
                 isClick = false
                 $('#mobileMenu').removeClass('is--active')
+                clearTimeout(closeTimer)
+                setTimeout(function() {
+                    anime({
+                        targets: '.mobile__container',
+                        translateX: '100vw',
+                        duration: 2000
+                    })
+                }, 400)
                 anime({
                     targets: '.__mobLink',
                     translateY: 45, // -> '250px'
                     delay: anime.stagger(80),
                     complete: function(anim) {
-                        anime({
-                            targets: '.mobile__container',
-                            translateX: '100vw',
-                        })
                         anime({
                             targets: '#mobileMenu',
                             rotate: 0, // -> '250px'
