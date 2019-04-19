@@ -302,3 +302,14 @@ $navbarbg: #040F29;
         height: 80px !important;
     }
 }
+
+@media (min-height: 720px) {
+    .mobile__container {
+        &__menu {
+            margin-bottom: 40px;
+        }
+        &__socials {
+            margin-bottom: 110px;
+        }
+    }
+}

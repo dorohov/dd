@@ -97,8 +97,11 @@
         })
         
         $('.banner__down button').on('click', function() {
+
+            var dataScrollItem = $(this).data('scrollitem')
+
             $('html, body').animate({
-                scrollTop: $('.banner').innerHeight()
+                scrollTop: $(dataScrollItem).innerHeight()
             }, 1000, "swing");
         })
 

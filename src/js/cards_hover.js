@@ -24,13 +24,14 @@
 
         $('.services-icons__block').hover(function() {
             var thisId = $(this).data('iconid')
-            var home = new Vivus(thisId, {
-                type: 'scenario',
-                animTimingFunction: Vivus.EASE,
-                onReady: function() {
-                    console.log('onReady')
-                },
-            });
+
+            // var home = new Vivus(thisId, {
+            //     type: 'scenario',
+            //     animTimingFunction: Vivus.EASE,
+            //     onReady: function() {
+            //         console.log('onReady')
+            //     },
+            // });
         })
 
     })

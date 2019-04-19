@@ -107,6 +107,14 @@
             <video preload="metadata" loop="loop" poster="img/bg-video.jpg" autoplay muted id="about_video">
                 <source src="video/about.mp4" type='video/mp4;'>
             </video>
+            <div class="banner__down">
+                <button data-scrollitem=".about__video">
+                    <span>scroll down</span>
+                    <svg class="svg-down-dims svg is--down">
+                        <use xlink:href="img/svg/sprites.svg#down"></use>
+                    </svg>
+                </button>
+            </div>
             <script>
                 document.getElementById('about_video').play();
             </script>
