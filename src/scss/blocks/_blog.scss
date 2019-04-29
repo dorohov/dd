@@ -283,6 +283,30 @@
                     }
                 }
             }
+            ul {
+                &.ul-site {
+                    margin-bottom: 20px;
+                    li {
+                        margin-bottom: 10px;
+                        color: $text;
+                        font-size: 18px;
+                        line-height: 20px;
+                        position: relative;
+                        padding-left: 20px;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 5px;
+                            border-radius: 2px;
+                            width: 10px;
+                            height: 10px;
+                            background: $green;
+                            position: absolute;
+                        }
+                    }
+                }
+            }
         }
         &__socials {
             padding-top: 150px;
@@ -432,6 +456,12 @@
                 p {
                     font-size: 16px;
                     line-height: 18px;
+                }
+                ul.ul-site {
+                    li {
+                        font-size: 16px;
+                        line-height: 18px;
+                    }
                 }
             }
             &__socials {
