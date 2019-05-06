@@ -10,7 +10,7 @@
         &__inner {
             flex-wrap: wrap;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             margin: 0 -30px;
         }
     }
@@ -19,6 +19,7 @@
         overflow: hidden;
         max-width: 33.3333333%;
         width: 100%;
+        margin-bottom: 30px;
         &:hover {
             .portfolio {
                 &__block {

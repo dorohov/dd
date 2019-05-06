@@ -70,7 +70,9 @@
             var email = $(this).find('input#mail').val()
             var phone = $(this).find('input#phone').val()
             if(nameValidation(_form, name) && phoneValidation(_form, phone) && emailValidation(_form, email)) {
-
+                e.preventDefault()
+                // Код отправки сообщения на email
+                alert('Ваше сообщение успешно отправлено!')
             }else {
                 e.preventDefault()
             }

@@ -1,0 +1,30 @@
+.error404 {
+    @include animatedGradientBg();
+    &__inner {
+        @extend .container-xl;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        text-align: center;
+    }
+    &__image {
+        padding-bottom: 90px;
+        img {
+            max-width: 510px;
+            width: 100%;
+        }
+    }
+    &__title {
+        font-family: 'Intro';
+        font-weight: 900;
+        color: #fff;
+        font-size: 36px;
+        line-height: 35px;
+        margin-bottom: 25px;
+    }
+    &__subtitle {
+        color: #fff;
+        font-size: 16px;
+        line-height: 18px;
+        margin-bottom: 70px;
+    }
+}

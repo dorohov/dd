@@ -104,6 +104,7 @@ $services_text_color: #1C1E2B;
             line-height: 18px;
             min-height: 55px;
             transition: .4s all ease;
+            min-height: 90px;
         }
         &.is--blue {
             .services__block {
@@ -523,8 +524,12 @@ $services_text_color: #1C1E2B;
                     background: rgba(#fff, .1);
                 }
                 &__title,
-                &__content p {
+                &__content p,
+                &__content ul li{
                     color: #fff;
+                }
+                &__content ul li::before {
+                    background: #fff;
                 }
                 &__title {
                     &__ico {
@@ -604,6 +609,23 @@ $services_text_color: #1C1E2B;
                     line-height: 18px;
                     &:last-child {
                         margin-bottom: 0;
+                    }
+                }
+                ul {
+                    li {
+                        position: relative;
+                        padding-left: 20px;
+                        margin-bottom: 10px;
+                        &::before {
+                            content: '';
+                            left: 0;
+                            top: 5px;
+                            border-radius: 2px;
+                            width: 10px;
+                            height: 10px;
+                            background: #B5B9D6;
+                            position: absolute;
+                        }
                     }
                 }
             }
