@@ -211,17 +211,18 @@
             justify-content: space-between;
             &__title {
                 width: 100%;
+                max-width: 750px;
                 h1 {
                     margin: 0;
                     font-family: 'Intro';
                     font-weight: 900;
-                    font-size: 80px;
-                    line-height: 78px;
+                    font-size: 60px;
+                    line-height: 65px;
                     color: #fff;
                 }
             }
             &__img {
-                padding-right: 100px;
+                padding-left: 100px;
                 img {
                     max-width: 455px;
                     height: auto;
