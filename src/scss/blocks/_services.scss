@@ -505,6 +505,11 @@ $services_text_color: #1C1E2B;
         overflow: hidden;
         &.is--bg_dark {
             background: #0A1032;
+            .bgtext {
+                &::after {
+                    color: #fff;
+                }
+            }
             .heading {
                 color: #fff;
             }
