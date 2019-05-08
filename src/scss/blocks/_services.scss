@@ -196,7 +196,7 @@ $services_text_color: #1C1E2B;
                     font-weight: 900;
                     font-family: 'Intro';
                     font-size: 80px;
-                    line-height: 70px;
+                    line-height: 80px;
                     color: #fff;
                     margin-bottom: 55px;
                     white-space: nowrap;
@@ -332,17 +332,6 @@ $services_text_color: #1C1E2B;
             flex-wrap: wrap;
             justify-content: center;
             padding: 40px 20px;
-            &:hover {
-                .services-icons {
-                    &__block {
-                        &__icon {
-                            img {
-                                // transform: rotate(10deg) scale(1.1);
-                            }
-                        }
-                    }
-                }
-            }
             &__icon {
                 height: 155px;
                 margin-bottom: 30px;
@@ -532,6 +521,9 @@ $services_text_color: #1C1E2B;
                     background: #fff;
                 }
                 &__title {
+                    h1 {
+                        color: #fff;
+                    }
                     &__ico {
                         span {
                             background: #fff !important;
