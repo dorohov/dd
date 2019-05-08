@@ -558,12 +558,15 @@ $services_text_color: #1C1E2B;
             margin-bottom: 10px;
             transition: .25s all ease;
             &__title {
-                color: $text;
-                font-family: 'Intro';
-                font-weight: 900;
-                font-size: 36px;
-                line-height: 35px;
-                cursor: pointer;
+                h1 {
+                    margin: 0;
+                    color: $text;
+                    font-family: 'Intro';
+                    font-weight: 900;
+                    font-size: 36px;
+                    line-height: 35px;
+                    cursor: pointer;
+                }
                 padding: 40px 50px 40px 100px;
                 position: relative;
                 user-select: none;
@@ -689,9 +692,11 @@ $services_text_color: #1C1E2B;
         &-accordion {
             &__block {
                 &__title {
-                    font-size: 26px;
-                    padding-top: 30px;
+                    h1 {
+                        font-size: 26px;
+                    }
                     padding-bottom: 30px;
+                    padding-top: 30px;
                     &__ico {
                         top: 30px;
                     }
@@ -817,8 +822,10 @@ $services_text_color: #1C1E2B;
         &-accordion {
             &__block {
                 &__title {
-                    font-size: 20px;
-                    line-height: 24px;
+                    h1 {
+                        font-size: 20px;
+                        line-height: 24px;
+                    }
                     padding: 20px 20px 20px 50px;
                     &__ico {
                         top: 20px;
