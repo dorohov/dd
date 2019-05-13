@@ -173,12 +173,24 @@
     }
     &__next {
         @include animatedGradientBg();
+        display: flex;
         a {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-wrap: nowrap;
             height: 200px;
+            width: 50%;
+            &.is--prev {
+                svg {
+                    transform: rotate(180deg);
+                }
+                &:hover {
+                    svg {
+                        transform: translateX(-15px) rotate(180deg);
+                    }
+                }
+            }
             span {
                 font-size: 36px;
                 line-height: 36px;
@@ -264,6 +276,15 @@
             }
         }
     }
+    .presentation {
+        &__next {
+            a {
+                span {
+                    font-size: 26px;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: $resp768) {
@@ -286,11 +307,13 @@
             }
         }
         &__next {
+            flex-wrap: wrap;
             a {
                 height: 100px;
+                width: 100%;
                 span {
                     font-size: 20px;
-                    margin-right: 5px;
+                    margin-right: 20px;
                 }
                 svg {
                     width: 20px;
