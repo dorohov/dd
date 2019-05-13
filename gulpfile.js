@@ -153,6 +153,7 @@ function createBundleJs() {
                 './dist/js/slick.min.js',
                 './dist/js/validator.min.js',
                 './dist/js/vivus.min.js',
+                './dist/js/jquery.modal.min.js',
                 './dist/js/main.js'
             ])
             .pipe(sourcemaps.init())

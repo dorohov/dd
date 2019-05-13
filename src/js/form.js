@@ -71,8 +71,9 @@
             var phone = $(this).find('input#phone').val()
             if(nameValidation(_form, name) && phoneValidation(_form, phone) && emailValidation(_form, email)) {
                 e.preventDefault()
-                // Код отправки сообщения на email
-                alert('Ваше сообщение успешно отправлено!')
+
+                $('#form_modal').modal()
+
             }else {
                 e.preventDefault()
             }
