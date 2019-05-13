@@ -18,7 +18,7 @@
             margin-bottom: 30px;
             a {
                 @include bgLink(24px, 4px, $blue, #fff);
-                color: #fff;
+                color: #fff !important;
             }
         }
         &__btn {

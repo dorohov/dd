@@ -29,7 +29,7 @@
     font-size: $fontsite;
     font-family: 'Intro';
     font-weight: 900;
-    color: $mainColor;
+    color: $mainColor !important;
     position: relative;
     @if($fontsite == 36px) {
         line-height: 50px;
