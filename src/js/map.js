@@ -28,7 +28,7 @@ var map;
                 }
             ]
           });
-          var icon = 'http://frontend.dorohovdesign.ru/dd/img/marker.png';
+          var icon = 'http://frontend.dev.dorohovdesign.ru/dd/img/marker.png';
 
             var marker = new google.maps.Marker({
                 position: new google.maps.LatLng(52.974394, 36.059105),
