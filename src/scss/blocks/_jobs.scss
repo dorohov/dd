@@ -97,6 +97,22 @@
       }
 }
 
+@media (max-width: 1300px) {
+    .jobs {
+        &__top {
+            &__desc {
+                &__block {
+                    &__desc {
+                        br {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: $resp1200) {
     .jobs {
         &__top {
@@ -131,9 +147,6 @@
                         p {
                             font-size: 14px;
                             line-height: 16px;
-                            br {
-                                display: none;
-                            }
                         }
                     }
                 }
