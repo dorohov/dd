@@ -129,7 +129,7 @@
                 margin-bottom: 30px;
                 a {
                     @include bgLink(20px, 4px, $blue, #fff);
-                    color: #fff;
+                    color: #fff !important;
                 }
             }
         }
