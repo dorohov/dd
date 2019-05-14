@@ -53,6 +53,7 @@
                     margin-bottom: 20px;
                 }
                 &__desc {
+                    max-width: 50%;
                     p {
                         margin: 0 0 15px 0;
                         line-height: 18px;
@@ -123,6 +124,10 @@
                         font-size: 22px;
                     }
                     &__desc {
+                        max-width: 100%;
+                        br {
+                            display: none;
+                        }
                         p {
                             font-size: 14px;
                             line-height: 16px;
