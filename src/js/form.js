@@ -69,10 +69,22 @@
             var name = $(this).find('input#name').val()
             var email = $(this).find('input#mail').val()
             var phone = $(this).find('input#phone').val()
+            var resume = $(this).find('input#resume').val()
             if(nameValidation(_form, name) && phoneValidation(_form, phone) && emailValidation(_form, email)) {
                 e.preventDefault()
 
-                $('#form_modal').modal()
+                $.post(
+                    '/formsave/',
+                    {
+                        name: name,
+                        email: email,
+                        phone: phone,
+                        resume: resume
+                    },
+                    function() {
+                        $('#form_modal').modal()
+                    }
+                )
 
             }else {
                 e.preventDefault()
