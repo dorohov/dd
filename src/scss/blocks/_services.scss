@@ -504,6 +504,9 @@ $services_text_color: #1C1E2B;
     }
     &-accordion {
         overflow: hidden;
+        .heading {
+            position: relative;
+        }
         &.is--bg_dark {
             background: #0A1032;
             .bgtext {
@@ -513,7 +516,6 @@ $services_text_color: #1C1E2B;
             }
             .heading {
                 color: #fff;
-                position: relative;
             }
             .services-accordion__block {
                 &.is--open {
@@ -571,7 +573,8 @@ $services_text_color: #1C1E2B;
                 user-select: none;
                 &__ico {
                     position: absolute;
-                    top: 40px;
+                    top: 50%;
+                    margin-top: -19px;
                     left: 30px;
                     span {
                         width: 38px;
@@ -618,6 +621,8 @@ $services_text_color: #1C1E2B;
                         position: relative;
                         padding-left: 20px;
                         margin-bottom: 10px;
+                        font-size: 16px;
+                        line-height: 16px;
                         &::before {
                             content: '';
                             left: 0;

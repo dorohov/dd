@@ -158,7 +158,7 @@ function createBundleJs() {
             ])
             .pipe(sourcemaps.init())
             .pipe(concat('bundle.js'))
-            .pipe(minify())
+            // .pipe(minify())
             .pipe(gulp.dest('dist/js'))
             .on('end', browserSync.reload)
 }
