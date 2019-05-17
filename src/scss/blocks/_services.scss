@@ -565,7 +565,7 @@ $services_text_color: #1C1E2B;
                     font-family: 'Intro';
                     font-weight: 900;
                     font-size: 36px;
-                    line-height: 35px;
+                    line-height: 36px;
                     cursor: pointer;
                 }
                 padding: 40px 50px 40px 100px;
@@ -626,7 +626,8 @@ $services_text_color: #1C1E2B;
                         &::before {
                             content: '';
                             left: 0;
-                            top: 5px;
+                            top: 50%;
+                            margin-top: -5px;
                             border-radius: 2px;
                             width: 10px;
                             height: 10px;
@@ -698,12 +699,10 @@ $services_text_color: #1C1E2B;
                 &__title {
                     h2 {
                         font-size: 26px;
+                        line-height: 26px;
                     }
                     padding-bottom: 30px;
                     padding-top: 30px;
-                    &__ico {
-                        top: 30px;
-                    }
                 }
             }
         }
@@ -828,11 +827,10 @@ $services_text_color: #1C1E2B;
                 &__title {
                     h2 {
                         font-size: 20px;
-                        line-height: 24px;
+                        line-height: 20px;
                     }
                     padding: 20px 20px 20px 50px;
                     &__ico {
-                        top: 20px;
                         left: 10px;
                         span {
                             width: 28px;
