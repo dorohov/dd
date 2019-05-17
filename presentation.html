@@ -105,12 +105,16 @@
             <div class="presentation__arrows is--white">
                 <div class="presentation__arrows__inner">
                     <ul>
-                        <li class="is--prev"><a href="#" data-txt="Предыдущий проект"><span>Предыдущий проект</span></a></li>
-                        <li class="is--next"><a href="#" data-txt="Следующий проект"><span>Следующий проект</span></a></li>
+                        <li class="is--prev"><a href="#"><svg class="svg-share-dims svg is--share">
+                                    <use xlink:href="img/svg/sprites.svg#share"></use>
+                                </svg></a></li>
+                        <li class="is--next"><a href="#"><svg class="svg-share-dims svg is--share">
+                                    <use xlink:href="img/svg/sprites.svg#share"></use>
+                                </svg></a></li>
                     </ul>
                 </div>
             </div>
-            <div class="presentation__fake"><img src="img/fake_presentation.jpg" alt=""></div>
+            <div class="presentation__fake __dd"><img src="img/fake_presentation.jpg" alt=""></div>
             <div class="presentation__next">
                 <a href="#" class="is--prev">
                     <span>Предыдущий проект</span>
@@ -274,7 +278,7 @@
         </div>
     </div>
     <script src="dist/js/jquery-3.3.1.min.js"></script>
-    <script src="dist/js/bundle-min.js"></script>
+    <script src="dist/js/bundle.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANLxdBSU8fJGR5IzCxzgTbVTdgOsJXcq4&callback=initMap"></script>
     <script>
         svg4everybody();

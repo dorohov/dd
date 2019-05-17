@@ -3,12 +3,12 @@
     <div class="presentation__arrows is--white">
         <div class="presentation__arrows__inner">
             <ul>
-                <li class="is--prev"><a href="#" data-txt="Предыдущий проект"><span>Предыдущий проект</span></a></li>
-                <li class="is--next"><a href="#" data-txt="Следующий проект"><span>Следующий проект</span></a></li>
+                <li class="is--prev"><a href="#">@@include('../components/components.svg.html', {"name": "share"})</a></li>
+                <li class="is--next"><a href="#">@@include('../components/components.svg.html', {"name": "share"})</a></li>
             </ul>
         </div>
     </div>
-    <div class="presentation__fake"><img src="img/fake_presentation.jpg" alt=""></div>
+    <div class="presentation__fake __dd"><img src="img/fake_presentation.jpg" alt=""></div>
     @@include('portfolio.next.html')
     @@include('../blocks/blocks.form.main.html', {
         "title": "Обсудим Ваш <br> проект?",

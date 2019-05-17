@@ -18,6 +18,14 @@
             }else {
                 elements.container.removeClass('is--stop')
             }
+
+            if($('.presentation__next').visible(true)
+            || $('.form').visible(true)
+            || $('.footer').visible(true)) {
+                $('.presentation__arrows').addClass('is--stop')
+            }else {
+                $('.presentation__arrows').removeClass('is--stop')
+            }
         }
 
         $(window).resize(function() {
@@ -30,3 +38,5 @@
 
     })
 })(jQuery);
+
+console.log('dasdasdjkj');
