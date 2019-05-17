@@ -63,33 +63,76 @@
             }
         }
 
-        $('form.is--validation').submit(function(e) {
+        $('#mainForm form').submit(function(e) {
             // e.preventDefault()
-            var _form = $(this)
-            var name = $(this).find('input#name').val()
-            var email = $(this).find('input#mail').val()
-            var phone = $(this).find('input#phone').val()
-            var resume = $(this).find('input#resume').val()
+            var _form = $(this);
+            var name = $(this).find('input#name').val();
+            var email = $(this).find('input#mail').val();
+            var phone = $(this).find('input#phone').val();
+            var resume = $(this).find('input#resume').val();
+        
             if(nameValidation(_form, name) && phoneValidation(_form, phone) && emailValidation(_form, email)) {
-                e.preventDefault()
-
-                $.post(
-                    '/formsave/',
-                    {
-                        name: name,
-                        email: email,
-                        phone: phone,
-                        resume: resume
+        
+                e.preventDefault();
+        
+                /*
+                                $.post(
+                                    '/formsave/',
+                                    {
+                                        name: name,
+                                        email: email,
+                                        phone: phone,
+                                        resume: resume
+                                    },
+                                    function() {
+                                        $('#form_modal').modal()
+                                    }
+                                )
+        
+                            }else {
+                                e.preventDefault()
+                            }
+                */
+        
+                $.ajax({
+                    url: '/formsave/' ,
+                    type:  "POST",
+                    data: $(this).serialize(),  // Сеарилизуем объект
+                    success: function(response) { //Данные отправлены успешно
+        
+                        var result = $.parseJSON(response);
+        
+                        if(result =='1'){
+        
+                            $('#form_modal').modal();
+        
+                            $('#mainForm form').find('input#name').val('');
+                            $('#mainForm form').find('input#mail').val('');
+                            $('#mainForm form').find('input#phone').val('');
+                            $('#mainForm form').find('input#resume').val('');
+        
+        
+        
+        
+                        } else {
+        
+                            alert('Что то пошло не так(');
+                        }
+                        //$('#result_form').html('Имя: '+result.name+'<br>Телефон: '+result.phonenumber);
+        
                     },
-                    function() {
-                        $('#form_modal').modal()
+                    error: function(response) { // Данные не отправлены
+                        //$('#result_form').html('Ошибка. Данные не отправлены.');
+                        alert('Что то пошло не так(');
                     }
-                )
-
-            }else {
-                e.preventDefault()
+                });
+        
             }
-        })
+        
+            return false;
+        
+        
+        });
 
         $('form.is--validation input#name').on('input', function(e) {
             return nameValidation($('form.is--validation'), e.target.value)

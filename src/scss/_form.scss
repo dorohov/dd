@@ -22,6 +22,7 @@
             line-height: 18px;
             color: $text;
             margin-bottom: 50px;
+            font-weight: 400 !important;
         }
     }
     &__group {
@@ -84,6 +85,7 @@
                 color: $text;
                 font-size: 16px;
                 line-height: 18px;
+                font-weight: 400 !important;
             }
             &.is--focus {
                 span {
@@ -193,6 +195,7 @@
             line-height: 18px;
             color: $text;
             margin-bottom: 80px;
+            font-weight: 400 !important;
         }
         &__links {
             margin-bottom: 130px;
