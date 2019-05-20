@@ -38,5 +38,3 @@
 
     })
 })(jQuery);
-
-console.log('dasdasdjkj');

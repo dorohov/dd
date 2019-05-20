@@ -44,7 +44,7 @@
         }
 
         function phoneValidation(_form, phone) {
-            if(!validator.isMobilePhone(phone, 'ru-RU')) {
+            if(!validator.isMobilePhone(phone)) {
                 showError(_form, 'phone', 'Введите номер телефона', 'Телефон')
                 return false
             }else {
