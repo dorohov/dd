@@ -4,11 +4,20 @@
         margin-right: auto;
         padding-left: 15px;
         padding-right: 15px;
+        &-fluid {
+            padding-left: 40px;
+            padding-right: 40px;
+            @media (max-width: 767px) {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
     }
     .row {
         display: flex;
         margin-left: -15px;
         margin-right: -15px;
+        flex-wrap: wrap;
     }
     .cols {
         padding-left: 15px;
@@ -17,5 +26,28 @@
     .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive {
         display: block;
         max-width: 100%;
+    }
+    ._yarus__block-site {
+        ._ybs__note {
+            @media (max-width: 767px) {
+                margin-bottom: 40px;
+            }
+        }
+    }
+    ._yarus__block-brend {
+        ._ybb__inner {
+            @media (max-width: 767px) {
+                padding-top: 150px;
+            }
+        }
+    }
+    ._ybb__heading-block.item1 {
+        @media (max-width: 767px) {
+            color: #000;
+            &::after,
+            &::before {
+                z-index: -1;
+            }
+        }
     }
 }
