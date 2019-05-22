@@ -23,7 +23,6 @@
                    isOpen = false
                 }
             })
-            $('html,body').animate({scrollTop: $(box)[0].offsetTop - $('.navbar').innerHeight()},'slow');
             $(box).parent('.services-accordion__block').toggleClass('is--open')
 
         }
