@@ -71,6 +71,9 @@
         $(document).scroll(function() {
             showBlock()
         })
+        $(document).on('click', function() {
+            showBlock()
+        })
 
         function showBlock() {
             var portfolio__block  = $('.visblock')
