@@ -4,7 +4,7 @@
     @@include('components/components.head.html', {"title": "Разработка сайтов для строительных компаний"})
     <link rel="stylesheet" href="dist/css/landings/building/style.css">
 </head>
-<body>
+<body class="__b_land">
     @@include('components/components.navbar.html', {
         "type": "transparent",
         "color": "dark",
@@ -14,5 +14,15 @@
         @@include('landings/building/building.main.html')
     </main>
     @@include('components/components.footer.html')
+    <script>
+        if($(window).innerWidth() > 1200) {
+            var s = skrollr.init();
+            $('.__b_land').mousemove(function(e) {
+            $('.bl-te__pr img').css({
+                marginRight: e.clientX / 40
+            }) 
+        })
+        }
+    </script>
 </body>
 </html> 
