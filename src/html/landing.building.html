@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    @@include('components/components.head.html', {"title": "Разработка сайтов для строительных компаний"})
+    <link rel="stylesheet" href="dist/css/landings/building/style.css">
+</head>
+<body>
+    @@include('components/components.navbar.html', {
+        "type": "transparent",
+        "color": "dark",
+        "loader": "min"
+    })
+    <main>
+        @@include('landings/building/building.main.html')
+    </main>
+    @@include('components/components.footer.html')
+</body>
+</html> 

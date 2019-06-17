@@ -28,7 +28,7 @@ var gulp = require('gulp'),
     var assets = {
         sass:       'src/scss/*.scss',
         svg:        'src/svg/*.svg',
-        images:     'src/images/*',
+        images:     'src/images/**/*',
         html:       'src/html/*.html',
         js:         'src/js/**/*.js',
         fonst:      'src/fonts/*.{ttf, otf}'
@@ -50,6 +50,19 @@ function css() {
             .pipe(autoprefixer({browsers: ['> 2% in RU', 'last 4 version', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']}))
             .pipe(gulp.dest('dist/css'))
             .on('end', browserSync.reload)
+}
+
+function cssLandings() {
+    return gulp.src('src/scss/landings/**/*.scss')
+            .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+                    .pipe(sass().on('error', function(error) {
+                        console.log(error)
+                    }))
+                    .pipe(strip_comments())
+                    .pipe(minifyCSS())
+                    .pipe(autoprefixer({browsers: ['> 2% in RU', 'last 4 version', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']}))
+                    .pipe(gulp.dest('dist/css/landings'))
+                    .on('end', browserSync.reload)
 }
 
 /*
@@ -164,6 +177,7 @@ function createBundleJs() {
 }
 
 gulp.task('css', css)
+gulp.task('cssLandings', cssLandings)
 gulp.task('svgMap', svgMap)
 gulp.task('imageMinify', imageMinify)
 gulp.task('html', html)
@@ -175,6 +189,7 @@ gulp.task('browser_sync', browser_sync)
 gulp.task('build', function() {
     gulp.watch('src/html/**/*.html', gulp.series('html'))
     gulp.watch('src/scss/**/*.scss', gulp.series('css'))
+    gulp.watch('src/scss/**/*.scss', gulp.series('cssLandings'))
     gulp.watch(assets.js, gulp.series('js'))
     gulp.watch('dist/js/main.js', gulp.series('createBundleJs'))
     // gulp.watch('dist/css/style.css', gulp.series('createBundleCss'))
@@ -183,7 +198,7 @@ gulp.task('build', function() {
 })
 
 gulp.task('default', gulp.series(
-    // gulp.parallel('html', 'css', 'js', 'svgMap', 'imageMinify'),
-    gulp.parallel('html', 'css', 'js', 'createBundleJs', 'svgMap', 'imageMinify'),
+    // gulp.parallel('html', 'css', 'cssLandings', 'js', 'svgMap', 'imageMinify'),
+    gulp.parallel('html', 'css', 'cssLandings', 'js', 'createBundleJs', 'svgMap', 'imageMinify'),
     gulp.parallel('build', 'browser_sync')
 ))
