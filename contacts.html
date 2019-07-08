@@ -145,7 +145,29 @@
                     </div>
                 </div>
             </div>
-            <div id="map"></div>
+            <div id="map">
+                <a class="dg-widget-link" href="http://2gis.ru/orel/firm/9992890954742937/center/36.058715,52.974253/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Орла</a>
+                <div class="dg-widget-link"><a href="http://2gis.ru/orel/center/36.058715,52.974253/zoom/16/routeTab/rsType/bus/to/36.058715,52.974253╎Дизайн-студия Александра Дорохова?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Дизайн-студия Александра Дорохова</a></div>
+                <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+                <script charset="utf-8">
+                    new DGWidgetLoader({
+                        "width": 640,
+                        "height": 600,
+                        "borderColor": "#a3a3a3",
+                        "pos": {
+                            "lat": 52.974253,
+                            "lon": 36.058715,
+                            "zoom": 16
+                        },
+                        "opt": {
+                            "city": "orel"
+                        },
+                        "org": [{
+                            "id": "9992890954742937"
+                        }]
+                    });
+                </script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
+            </div>
         </div>
     </main>
     <footer class="footer">
@@ -234,7 +256,7 @@
     </div>
     <script src="dist/js/jquery-3.3.1.min.js"></script>
     <script src="dist/js/bundle.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8xthDm5FPC0HGwLPrFTXL5Q1nOP4h0gc&callback=initMap"></script>
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8xthDm5FPC0HGwLPrFTXL5Q1nOP4h0gc&callback=initMap"></script> -->
     <script>
         svg4everybody();
     </script>
